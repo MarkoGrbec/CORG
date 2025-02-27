@@ -160,15 +160,15 @@ var ratio_get = 1
 var _pool = []
 const K_EXP_CAP = 0.001
 #endregion entity
-func get_attack_strength(entity, _weapon_type):
-	var i_obj = mp.get_item_object(entity.entity_num)
-	#if it's hand don't use much attack
-	if i_obj.is_top_inventory:
-		return attack
-	if _weapon_type == Enums.weapon_type.melee:
-		return entity.ql * K_EXP_CAP * attack
-	else:
-		return entity.ql * K_EXP_CAP * range_attack
+#func get_attack_strength(entity, _weapon_type):
+	#var i_obj = mp.get_item_object(entity.entity_num)
+	##if it's hand don't use much attack
+	#if i_obj.is_top_inventory:
+		#return attack
+	#if _weapon_type == Enums.weapon_type.melee:
+		#return entity.ql * K_EXP_CAP * attack
+	#else:
+		#return entity.ql * K_EXP_CAP * range_attack
 
 func get_defense_strength(entity):
 	return entity.ql * K_EXP_CAP * defense

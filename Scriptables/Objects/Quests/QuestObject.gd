@@ -63,24 +63,24 @@ var quest_index
 func generate_npc(index: int) -> void:
 	quest_index = index
 
-# Create NPC on server for client
-func create_npc_with_avatar(id_avatar: int):
-	var server_quest: ServerQuest = g_man.savable_multi_avatar__quest_data.new_data(id_avatar, quest_index, 0)
-	server_quest._quest_index = quest_index
-	server_quest.fully_load()
-	if server_quest.activated:
-		return server_quest
-	
-	config(server_quest)
-	if server_quest.activated:
-		return server_quest
+## Create NPC on server for client
+#func create_npc_with_avatar(id_avatar: int):
+	#var server_quest: ServerQuest = g_man.savable_multi_avatar__quest_data.new_data(id_avatar, quest_index, 0)
+	#server_quest._quest_index = quest_index
+	#server_quest.fully_load()
+	#if server_quest.activated:
+		#return server_quest
+	#
+	#config(server_quest)
+	#if server_quest.activated:
+		#return server_quest
 
-# Configure the NPC
-func config(server_quest: ServerQuest) -> void:
-	if not server_quest.initialized:
-		server_quest.position = position
-		server_quest.activated = activated
-		server_quest.load_inventory()
+## Configure the NPC
+#func config(server_quest: ServerQuest) -> void:
+	#if not server_quest.initialized:
+		#server_quest.position = position
+		#server_quest.activated = activated
+		#server_quest.load_inventory()
 
 # Get a quest question based on basis and text input
 func get_quest_question(basis: int, text: String):

@@ -1,4 +1,4 @@
-[gd_resource type="Theme" load_steps=36 format=3 uid="uid://cmeiu126swihn"]
+[gd_resource type="Theme" load_steps=38 format=3 uid="uid://cmeiu126swihn"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tbo2x"]
 bg_color = Color(1, 1, 0.666667, 0.196078)
@@ -60,11 +60,58 @@ corner_radius_top_right = 10
 corner_radius_bottom_right = 10
 corner_radius_bottom_left = 10
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_d0f3n"]
+bg_color = Color(0.333333, 0.333333, 0, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 10
+border_color = Color(0.117647, 0.117647, 0, 1)
+border_blend = true
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_se4j0"]
 bg_color = Color(0.333333, 0.333333, 0, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 20
+border_color = Color(0.118096, 0.118097, 0, 1)
+border_blend = true
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+shadow_size = 2
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lmjgp"]
-bg_color = Color(0.501961, 0.501961, 0.0823529, 0.752941)
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2iy7r"]
+bg_color = Color(0.337368, 0.337368, 2.40654e-07, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 15
+border_color = Color(0.117647, 0.117647, 0, 1)
+border_blend = true
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_d162h"]
+bg_color = Color(0.391955, 0.391955, 9.62615e-08, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 10
+border_color = Color(0.117647, 0.117647, 0, 1)
+border_blend = true
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sje64"]
 bg_color = Color(0.333333, 0.333333, 0, 1)
@@ -219,8 +266,10 @@ Button/styles/focus = SubResource("StyleBoxEmpty_d0f3n")
 Button/styles/hover = SubResource("StyleBoxFlat_ix4a1")
 Button/styles/normal = SubResource("StyleBoxFlat_5ya4c")
 Button/styles/pressed = SubResource("StyleBoxFlat_e2e81")
+CheckBox/styles/hover_pressed = SubResource("StyleBoxFlat_d0f3n")
 CheckBox/styles/pressed = SubResource("StyleBoxFlat_se4j0")
-CheckButton/styles/focus = SubResource("StyleBoxFlat_lmjgp")
+CheckButton/styles/focus = SubResource("StyleBoxFlat_2iy7r")
+CheckButton/styles/hover_pressed = SubResource("StyleBoxFlat_d162h")
 HScrollBar/styles/grabber = SubResource("StyleBoxFlat_sje64")
 HScrollBar/styles/grabber_highlight = SubResource("StyleBoxFlat_vb4x3")
 HScrollBar/styles/grabber_pressed = SubResource("StyleBoxFlat_yvrel")

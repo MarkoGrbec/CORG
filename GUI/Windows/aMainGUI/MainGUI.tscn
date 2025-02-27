@@ -1,6 +1,6 @@
 [gd_scene load_steps=29 format=3 uid="uid://c4qttaem30mmq"]
 
-[ext_resource type="Theme" uid="uid://cmeiu126swihn" path="res://GUI/Themes/default.tres" id="1_8fqb8"]
+[ext_resource type="Theme" uid="uid://cmeiu126swihn" path="res://my assets/Themes/default.tres" id="1_8fqb8"]
 [ext_resource type="Script" uid="uid://dupmf77s0yyc8" path="res://GUI/Windows/aMainGUI/AndroidKeyboardChecker.gd" id="1_o0ff0"]
 [ext_resource type="Script" uid="uid://dhmxt5s4x3tcn" path="res://GUI/Windows/RegLogin/RegLogin.gd" id="1_syuvg"]
 [ext_resource type="Script" uid="uid://ch7apjapcfo3j" path="res://my assets/changes manager/ChangesManager.gd" id="2_nl73f"]
