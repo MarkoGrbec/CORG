@@ -1,0 +1,32 @@
+[gd_scene load_steps=2 format=3 uid="uid://ii0eq1y1cggt"]
+
+[ext_resource type="Script" uid="uid://7iyl435apavy" path="res://GUI/buttons/reg_login/existingAccountButton.gd" id="1_nm314"]
+
+[node name="ExistingAccountButton" type="HBoxContainer" node_paths=PackedStringArray("username_button")]
+offset_right = 62.0
+offset_bottom = 31.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("1_nm314")
+username_button = NodePath("MarginContainer/username")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+
+[node name="username" type="Button" parent="MarginContainer"]
+layout_mode = 2
+text = "fgth"
+
+[node name="MarginContainer2" type="MarginContainer" parent="."]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+
+[node name="X" type="Button" parent="MarginContainer2"]
+layout_mode = 2
+text = "X"
+
+[connection signal="pressed" from="MarginContainer/username" to="." method="login"]
+[connection signal="pressed" from="MarginContainer2/X" to="." method="delete_username"]

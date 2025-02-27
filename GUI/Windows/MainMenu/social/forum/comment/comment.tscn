@@ -1,0 +1,37 @@
+[gd_scene load_steps=2 format=3 uid="uid://byqct141v4ptb"]
+
+[ext_resource type="Script" path="res://GUI/Windows/MainMenu/social/forum/comment/Comment.gd" id="1_qrg4b"]
+
+[node name="comment" type="HBoxContainer"]
+script = ExtResource("1_qrg4b")
+
+[node name="left amrgin" type="MarginContainer" parent="."]
+custom_minimum_size = Vector2(16, 0)
+layout_mode = 2
+
+[node name="comment margin" type="MarginContainer" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="comment container" type="VBoxContainer" parent="comment margin"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="comment margin/comment container"]
+layout_mode = 2
+
+[node name="comment" type="VBoxContainer" parent="comment margin/comment container/MarginContainer"]
+layout_mode = 2
+
+[node name="comment text" type="Label" parent="comment margin/comment container/MarginContainer/comment"]
+layout_mode = 2
+text = "comment text"
+
+[node name="add comment text" type="LineEdit" parent="comment margin/comment container/MarginContainer/comment"]
+layout_mode = 2
+
+[node name="add comment" type="Button" parent="comment margin/comment container/MarginContainer/comment"]
+layout_mode = 2
+text = "add comment
+"
+
+[connection signal="pressed" from="comment margin/comment container/MarginContainer/comment/add comment" to="." method="on_comment_submit"]

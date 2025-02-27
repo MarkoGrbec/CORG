@@ -1,0 +1,23 @@
+[gd_scene load_steps=2 format=3 uid="uid://b2i1wol5qwtld"]
+
+[ext_resource type="Script" path="res://GUI/Windows/MainMenu/Options/BindingKey.gd" id="1_y0nr8"]
+
+[node name="binding container" type="HBoxContainer" node_paths=PackedStringArray("label", "button")]
+script = ExtResource("1_y0nr8")
+index = 1
+label = NodePath("label")
+button = NodePath("change binding")
+
+[node name="label" type="Label" parent="."]
+layout_mode = 2
+text = "forward"
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+custom_minimum_size = Vector2(16, 0)
+layout_mode = 2
+
+[node name="change binding" type="Button" parent="."]
+layout_mode = 2
+text = "some custom binding"
+
+[connection signal="pressed" from="change binding" to="." method="_change_binding"]

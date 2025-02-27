@@ -1,0 +1,52 @@
+[gd_scene load_steps=2 format=3 uid="uid://rjk56r4b38ef"]
+
+[ext_resource type="Script" uid="uid://yhhlafrgwr7u" path="res://GUI/buttons/welcomeUnwelcome/WelcomeUnwelcomeButton.gd" id="1_adsrv"]
+
+[node name="HBoxContainer" type="HBoxContainer" node_paths=PackedStringArray("reviel_me", "wait_time")]
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_adsrv")
+reviel_me = NodePath("item/VBoxContainer/MarginContainer/reviel me")
+wait_time = NodePath("item/VBoxContainer/time")
+
+[node name="move to banned" type="MarginContainer" parent="."]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="move to banned"]
+layout_mode = 2
+text = "to banned"
+
+[node name="item" type="MarginContainer" parent="."]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="item"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="item/VBoxContainer"]
+layout_mode = 2
+
+[node name="reviel me" type="Button" parent="item/VBoxContainer/MarginContainer"]
+layout_mode = 2
+text = "reviel me"
+
+[node name="time" type="Label" parent="item/VBoxContainer"]
+layout_mode = 2
+
+[node name="MarginContainer2" type="MarginContainer" parent="item/VBoxContainer"]
+layout_mode = 2
+
+[node name="to pending" type="Button" parent="item/VBoxContainer/MarginContainer2"]
+layout_mode = 2
+text = "to pending"
+
+[node name="move to approved" type="MarginContainer" parent="."]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="move to approved"]
+layout_mode = 2
+text = "to approved"
+
+[connection signal="pressed" from="move to banned/Button" to="." method="_on_button_banned"]
+[connection signal="pressed" from="item/VBoxContainer/MarginContainer/reviel me" to="." method="_on_button_reviel_me"]
+[connection signal="pressed" from="item/VBoxContainer/MarginContainer2/to pending" to="." method="_on_button_pending"]
+[connection signal="pressed" from="move to approved/Button" to="." method="_on_button_approved"]

@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://crtau2b4m4bcu"]
+
+[ext_resource type="Script" uid="uid://bufvto0c1bt38" path="res://Networking/SocialNode/NetSocial.gd" id="1_jv4ut"]
+
+[node name="SocialNode" type="Node"]
+script = ExtResource("1_jv4ut")

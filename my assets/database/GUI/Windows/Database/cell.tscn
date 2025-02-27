@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://debpv21rf6ax3"]
+
+[ext_resource type="Script" uid="uid://bq62fy66sglfw" path="res://my assets/database/GUI/Windows/Database/GUICell.gd" id="1_y6op1"]
+
+[node name="cell" type="LineEdit"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_y6op1")
+
+[connection signal="text_submitted" from="." to="." method="_on_submit"]

@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="DungeonObject" load_steps=2 format=3 uid="uid://cudxjofharn40"]
+
+[ext_resource type="Script" uid="uid://bfpqhvfpv1t2t" path="res://Scriptables/Objects/Dungeon/DungeonObject.gd" id="1_gl4gj"]
+
+[resource]
+script = ExtResource("1_gl4gj")
+metadata/_custom_type_script = ExtResource("1_gl4gj")

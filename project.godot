@@ -1,0 +1,81 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[animation]
+
+warnings/check_invalid_track_paths=false
+
+[application]
+
+config/name="CORG"
+config/version="1.5.3"
+run/main_scene="res://Scenes/new_level.tscn"
+config/features=PackedStringArray("4.4", "Mobile")
+config/icon="res://icon.svg"
+
+[audio]
+
+general/text_to_speech=true
+driver/enable_input=true
+
+[autoload]
+
+g_man="*res://Singletons/game_manager.tscn"
+
+[display]
+
+window/handheld/orientation=4
+
+[editor_plugins]
+
+enabled=PackedStringArray()
+
+[file_customization]
+
+folder_colors={
+"res://GUI/Themes/": "green"
+}
+
+[input]
+
+database={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":96,"key_label":0,"unicode":184,"location":0,"echo":false,"script":null)
+]
+}
+LeftMouseButton={
+"deadzone": 0.2,
+"events": [Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"button_mask":1,"position":Vector2(403, 11),"global_position":Vector2(412, 59),"factor":1.0,"button_index":1,"canceled":false,"pressed":true,"double_click":false,"script":null)
+]
+}
+
+[input_devices]
+
+pointing/emulate_touch_from_mouse=true
+
+[layer_names]
+
+3d_physics/layer_1="movement"
+3d_physics/layer_2="batch area"
+3d_physics/layer_3="looks like batch area too"
+3d_physics/layer_4="pozabu ko vidiš takoj spremeni"
+3d_physics/layer_5="mobs"
+3d_physics/layer_6="projectile"
+3d_physics/layer_8="trap"
+
+[physics]
+
+3d/physics_engine="GodotPhysics3D"
+3d/default_gravity_vector=Vector3(0, 0, 0)
+
+[rendering]
+
+renderer/rendering_method="mobile"
+textures/vram_compression/import_etc2_astc=true

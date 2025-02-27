@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://bc0g1e46p2apx"]
+
+[sub_resource type="ImmediateMesh" id="ImmediateMesh_mdr0p"]
+
+[node name="Cube" type="MeshInstance3D"]
+mesh = SubResource("ImmediateMesh_mdr0p")

@@ -1,0 +1,51 @@
+[gd_scene load_steps=2 format=3 uid="uid://dnmyjtucbgd8o"]
+
+[ext_resource type="Script" path="res://GUI/Windows/MainMenu/Law/Law.gd" id="1_d27wi"]
+
+[node name="law" type="VBoxContainer"]
+custom_minimum_size = Vector2(256, 0)
+size_flags_horizontal = 0
+script = ExtResource("1_d27wi")
+
+[node name="header button" type="Button" parent="."]
+layout_mode = 2
+size_flags_horizontal = 0
+toggle_mode = true
+text = "header"
+
+[node name="law body" type="Label" parent="."]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 0
+text = "law text"
+
+[node name="vote" type="CheckBox" parent="."]
+visible = false
+layout_mode = 2
+text = "vote"
+
+[node name="voted container" type="HBoxContainer" parent="."]
+visible = false
+layout_mode = 2
+
+[node name="Label" type="Label" parent="voted container"]
+layout_mode = 2
+text = "voted"
+
+[node name="voted progress bar" type="ProgressBar" parent="voted container"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="total voted container" type="HBoxContainer" parent="."]
+visible = false
+layout_mode = 2
+
+[node name="Label" type="Label" parent="total voted container"]
+layout_mode = 2
+text = "total voted"
+
+[node name="total voted progress bar" type="ProgressBar" parent="total voted container"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[connection signal="toggled" from="header button" to="." method="on_header_button_pressed"]

@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://ij0msid61t6x"]
+
+[ext_resource type="Script" uid="uid://c0eofc2ipgf5r" path="res://my assets/changes manager/ChangesLabel.gd" id="1_hx714"]
+
+[node name="ChangesLabel" type="Label"]
+text = "hilkl"
+script = ExtResource("1_hx714")

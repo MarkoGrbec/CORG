@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="EntityPlanObject" load_steps=3 format=3 uid="uid://pacl82x0283i"]
+
+[ext_resource type="Script" path="res://Scriptables/Objects/Entity/Plan/Attached/AttachedObject.gd" id="1_gean6"]
+[ext_resource type="Script" path="res://Scriptables/Objects/Entity/Plan/EntityPlanObject.gd" id="2_7thas"]
+
+[resource]
+script = ExtResource("2_7thas")
+entity_num = 0
+attach = Array[ExtResource("1_gean6")]([])

@@ -1,0 +1,2620 @@
+[gd_scene load_steps=29 format=3 uid="uid://c4qttaem30mmq"]
+
+[ext_resource type="Theme" uid="uid://cmeiu126swihn" path="res://GUI/Themes/default.tres" id="1_8fqb8"]
+[ext_resource type="Script" uid="uid://dupmf77s0yyc8" path="res://GUI/Windows/aMainGUI/AndroidKeyboardChecker.gd" id="1_o0ff0"]
+[ext_resource type="Script" uid="uid://dhmxt5s4x3tcn" path="res://GUI/Windows/RegLogin/RegLogin.gd" id="1_syuvg"]
+[ext_resource type="Script" uid="uid://ch7apjapcfo3j" path="res://my assets/changes manager/ChangesManager.gd" id="2_nl73f"]
+[ext_resource type="Script" uid="uid://bcpq1ek8kqoyn" path="res://GUI/Windows/resize/CanvasControl.gd" id="4_jjysi"]
+[ext_resource type="Script" uid="uid://b3icvova3fpw3" path="res://GUI/Windows/resize/WindowManager.gd" id="4_tnbuf"]
+[ext_resource type="Script" uid="uid://251dsu0x0ty3" path="res://GUI/Windows/welcomeUnwelcome/WelcomeUnwelcome.gd" id="6_111yf"]
+[ext_resource type="Script" uid="uid://ddh42pyxq7usf" path="res://GUI/Windows/MainMenu/MainMenu.gd" id="6_rdw4q"]
+[ext_resource type="PackedScene" uid="uid://tgh8wetjjcqm" path="res://my assets/database/GUI/Windows/Database/DataBase.tscn" id="7_ldvd5"]
+[ext_resource type="Script" uid="uid://dsji2mfjxjvxc" path="res://GUI/Windows/MainMenu/corg/Confirm/Corg.gd" id="7_spxhj"]
+[ext_resource type="Script" uid="uid://4vgf38kghfjb" path="res://GUI/Windows/MainMenu/Options/Options.gd" id="7_ud4cm"]
+[ext_resource type="Script" uid="uid://b1puv31iqk7jo" path="res://GUI/Windows/MainMenu/social/Social.gd" id="7_ynbhv"]
+[ext_resource type="Script" uid="uid://bh8e3jkh4gmb" path="res://GUI/Windows/MainMenu/corg/Marketplace/Marketplace.gd" id="9_rbwfe"]
+[ext_resource type="Script" uid="uid://dhlree6nj42jf" path="res://Test/Test.gd" id="10_d6d6e"]
+[ext_resource type="Script" uid="uid://coolq65m2ewxv" path="res://GUI/Windows/Credits/Credits.gd" id="10_di25w"]
+[ext_resource type="Script" uid="uid://bbe5be3uksoam" path="res://GUI/Windows/MainMenu/Law/LawTab.gd" id="11_6rvsr"]
+[ext_resource type="Script" uid="uid://ds326jcr0p04j" path="res://GUI/Windows/CorgApplyToBeApproved/CorgApplyToBeApproved.gd" id="11_c6r24"]
+[ext_resource type="PackedScene" uid="uid://ba0tnj74ux3tm" path="res://GUI/Windows/MoldWindow/mold_window.tscn" id="11_ehfvd"]
+[ext_resource type="Script" uid="uid://pnkn5er5lmce" path="res://GUI/Windows/MainMenu/Spender/SpenderTab.gd" id="12_0312a"]
+[ext_resource type="Script" uid="uid://dpi5xn3hbrq61" path="res://GUI/Windows/Workers/WorkerWindow.gd" id="15_qov0t"]
+[ext_resource type="Script" uid="uid://dpwwopugggl43" path="res://GUI/Windows/Workers/AccountWorkerStatsWindow.gd" id="16_imobw"]
+[ext_resource type="Script" uid="uid://srxmfbxxyerw" path="res://GUI/Windows/StoreWindow/Store.gd" id="17_g2idr"]
+[ext_resource type="Script" uid="uid://b5i0rg3eq4eyu" path="res://GUI/Windows/CommercialManager/CommercialManager.gd" id="18_duh6y"]
+[ext_resource type="Script" uid="uid://t3n413qgduds" path="res://GUI/Windows/MainMenu/corg/Marketplace/ItemManager/ItemManager.gd" id="18_pp5oh"]
+[ext_resource type="PackedScene" uid="uid://c18vyj1wgpv6t" path="res://GUI/Windows/CommercialManager/commercial_spot.tscn" id="20_53ecb"]
+[ext_resource type="PackedScene" uid="uid://cw3dwj3hge0vn" path="res://GUI/Windows/MainMenu/Options/VolumeContainer.tscn" id="21_485uo"]
+[ext_resource type="Script" uid="uid://bid710oyy82qo" path="res://GUI/Windows/MainMenu/Law/LawManager.gd" id="21_p4k3o"]
+[ext_resource type="Script" uid="uid://bu716jh3xjdtf" path="res://GUI/Windows/MainMenu/Admin/AdminManager.gd" id="25_gr7ec"]
+
+[node name="CanvasLayer" type="CanvasLayer"]
+
+[node name="CanvasLayer" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_o0ff0")
+
+[node name="changes" type="Control" parent="CanvasLayer"]
+layout_mode = 1
+anchor_left = 0.314
+anchor_right = 0.314
+offset_left = 0.271973
+offset_right = 0.271973
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/changes"]
+layout_mode = 0
+
+[node name="Panel" type="Panel" parent="CanvasLayer/changes/MarginContainer"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/changes/MarginContainer"]
+layout_mode = 2
+script = ExtResource("2_nl73f")
+
+[node name="pick up indicator" type="Control" parent="CanvasLayer"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_top = 2.0
+offset_bottom = 2.0
+grow_horizontal = 0
+size_flags_horizontal = 8
+size_flags_vertical = 0
+theme = ExtResource("1_8fqb8")
+
+[node name="pick up" type="CheckBox" parent="CanvasLayer/pick up indicator"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -245.0
+offset_right = -217.0
+offset_bottom = 24.0
+grow_horizontal = 0
+disabled = true
+
+[node name="focus" type="CheckBox" parent="CanvasLayer/pick up indicator"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -197.0
+offset_right = -92.0
+offset_bottom = 47.0
+grow_horizontal = 0
+disabled = true
+text = "focus"
+
+[node name="debug" type="TextureRect" parent="CanvasLayer"]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 7.0
+offset_right = 313.0
+offset_bottom = 280.0
+theme = ExtResource("1_8fqb8")
+
+[node name="Control" type="Control" parent="CanvasLayer"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_8fqb8")
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="FileDialog" type="FileDialog" parent="CanvasLayer/Control/MarginContainer"]
+mode = 3
+title = "Open a File"
+position = Vector2i(20, 55)
+size = Vector2i(1100, 555)
+ok_button_text = "Open"
+file_mode = 0
+access = 2
+use_native_dialog = true
+
+[node name="CanvasRectControl" type="Control" parent="CanvasLayer"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_8fqb8")
+script = ExtResource("4_jjysi")
+
+[node name="RegLogin" type="Control" parent="CanvasLayer"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 111.0
+offset_top = 72.0
+offset_right = -148.0
+offset_bottom = -86.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_8fqb8")
+script = ExtResource("4_tnbuf")
+minimum_window_size = Vector2(315, 225)
+
+[node name="RegLoginTabs" type="TabContainer" parent="CanvasLayer/RegLogin" node_paths=PackedStringArray("window_manager", "debug", "file_dialog", "existing_account_container", "accounts_container", "server_ip_address", "server_port", "start_client_button", "log_username", "log_password", "reg_username", "reg_password", "reg_confirm_password", "confirm_line")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+current_tab = 0
+script = ExtResource("1_syuvg")
+window_manager = NodePath("..")
+debug = NodePath("../../debug")
+file_dialog = NodePath("../../Control/MarginContainer/FileDialog")
+existing_account_container = NodePath("Login with existing account/VBoxContainer/instructions/ScrollContainer/MarginContainer/existing_account_container")
+accounts_container = NodePath("Loged in accounts/VBoxContainer/instructions/ScrollContainer/MarginContainer/accounts container")
+server_ip_address = NodePath("start client server/marginCenter/VBoxContainer/ip address of server")
+server_port = NodePath("start client server/marginCenter/VBoxContainer/port of server")
+start_client_button = NodePath("start client server/marginCenter/VBoxContainer/HBoxContainer/MarginContainerClient/Client show to local server")
+log_username = NodePath("Login/MarginContainer/VBoxContainer/username")
+log_password = NodePath("Login/MarginContainer/VBoxContainer/password")
+reg_username = NodePath("Register/MarginContainer/VBoxContainer/username")
+reg_password = NodePath("Register/MarginContainer/VBoxContainer/password")
+reg_confirm_password = NodePath("Register/MarginContainer/VBoxContainer/Confirm password")
+confirm_line = NodePath("confirmation/MarginContainer/buttonsContainer/LineEdit")
+
+[node name="start client server" type="HBoxContainer" parent="CanvasLayer/RegLogin/RegLoginTabs"]
+layout_mode = 2
+tooltip_text = "first start server than client on other instance
+
+OR make self send and press server that's when you'll get host"
+metadata/_tab_index = 0
+
+[node name="marginCenter" type="MarginContainer" parent="CanvasLayer/RegLogin/RegLoginTabs/start client server"]
+custom_minimum_size = Vector2(300, 50)
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/RegLogin/RegLoginTabs/start client server/marginCenter"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/RegLogin/RegLoginTabs/start client server/marginCenter/VBoxContainer"]
+layout_mode = 2
+
+[node name="MarginContainerClient" type="MarginContainer" parent="CanvasLayer/RegLogin/RegLoginTabs/start client server/marginCenter/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Client show to local server" type="Button" parent="CanvasLayer/RegLogin/RegLoginTabs/start client server/marginCenter/VBoxContainer/HBoxContainer/MarginContainerClient"]
+layout_mode = 2
+text = "client"
+
+[node name="middle separator" type="MarginContainer" parent="CanvasLayer/RegLogin/RegLoginTabs/start client server/marginCenter/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+
+[node name="MarginContainerServer" type="MarginContainer" parent="CanvasLayer/RegLogin/RegLoginTabs/start client server/marginCenter/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Server" type="Button" parent="CanvasLayer/RegLogin/RegLoginTabs/start client server/marginCenter/VBoxContainer/HBoxContainer/MarginContainerServer"]
+layout_mode = 2
+text = "server"
+
+[node name="ip address of server" type="LineEdit" parent="CanvasLayer/RegLogin/RegLoginTabs/start client server/marginCenter/VBoxContainer"]
+layout_mode = 2
+placeholder_text = "server ip address"
+
+[node name="port of server" type="LineEdit" parent="CanvasLayer/RegLogin/RegLoginTabs/start client server/marginCenter/VBoxContainer"]
+layout_mode = 2
+placeholder_text = "server port"
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/RegLogin/RegLoginTabs/start client server/marginCenter/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="CheckBox" type="CheckBox" parent="CanvasLayer/RegLogin/RegLoginTabs/start client server/marginCenter/VBoxContainer/MarginContainer"]
+layout_mode = 2
+text = "self send"
+
+[node name="Login" type="HBoxContainer" parent="CanvasLayer/RegLogin/RegLoginTabs"]
+visible = false
+layout_mode = 2
+tooltip_text = "if you allready have account than simply login with username and password
+if you have already logged in try logging in with existing account tab"
+metadata/_tab_index = 1
+
+[node name="leftSpace" type="MarginContainer" parent="CanvasLayer/RegLogin/RegLoginTabs/Login"]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/RegLogin/RegLoginTabs/Login"]
+custom_minimum_size = Vector2(150, 50)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 6
+theme_override_constants/margin_left = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/RegLogin/RegLoginTabs/Login/MarginContainer"]
+layout_mode = 2
+
+[node name="username" type="LineEdit" parent="CanvasLayer/RegLogin/RegLoginTabs/Login/MarginContainer/VBoxContainer"]
+layout_mode = 2
+placeholder_text = "enter user name"
+
+[node name="password" type="LineEdit" parent="CanvasLayer/RegLogin/RegLoginTabs/Login/MarginContainer/VBoxContainer"]
+layout_mode = 2
+placeholder_text = "enter password"
+secret = true
+
+[node name="Login" type="Button" parent="CanvasLayer/RegLogin/RegLoginTabs/Login/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 45)
+layout_mode = 2
+text = "Login"
+
+[node name="Register" type="HBoxContainer" parent="CanvasLayer/RegLogin/RegLoginTabs"]
+visible = false
+layout_mode = 2
+tooltip_text = "if you aren't registered yet
+please choose unique user name and password
+
+password can be any type larger than 1 cahracter but recommended is at least 8 characters"
+metadata/_tab_index = 2
+
+[node name="leftSpace" type="MarginContainer" parent="CanvasLayer/RegLogin/RegLoginTabs/Register"]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/RegLogin/RegLoginTabs/Register"]
+custom_minimum_size = Vector2(150, 50)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 6
+theme_override_constants/margin_left = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/RegLogin/RegLoginTabs/Register/MarginContainer"]
+layout_mode = 2
+
+[node name="username" type="LineEdit" parent="CanvasLayer/RegLogin/RegLoginTabs/Register/MarginContainer/VBoxContainer"]
+layout_mode = 2
+placeholder_text = "enter user name"
+
+[node name="password" type="LineEdit" parent="CanvasLayer/RegLogin/RegLoginTabs/Register/MarginContainer/VBoxContainer"]
+layout_mode = 2
+placeholder_text = "enter password"
+secret = true
+
+[node name="Confirm password" type="LineEdit" parent="CanvasLayer/RegLogin/RegLoginTabs/Register/MarginContainer/VBoxContainer"]
+layout_mode = 2
+placeholder_text = "confirm password"
+secret = true
+
+[node name="register" type="Button" parent="CanvasLayer/RegLogin/RegLoginTabs/Register/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 45)
+layout_mode = 2
+text = "Register"
+
+[node name="Login with existing account" type="HBoxContainer" parent="CanvasLayer/RegLogin/RegLoginTabs"]
+visible = false
+layout_mode = 2
+tooltip_text = "login with existing account
+except if someone tried to hack in to your account.
+Than you'll need to relog with username and password.
+It's a security measure to easy get in and hard to hack to get in."
+metadata/_tab_index = 3
+
+[node name="leftSpace" type="MarginContainer" parent="CanvasLayer/RegLogin/RegLoginTabs/Login with existing account"]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/RegLogin/RegLoginTabs/Login with existing account"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="top" type="MarginContainer" parent="CanvasLayer/RegLogin/RegLoginTabs/Login with existing account/VBoxContainer"]
+custom_minimum_size = Vector2(0, 64)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+theme_override_constants/margin_left = 0
+
+[node name="instructions" type="MarginContainer" parent="CanvasLayer/RegLogin/RegLoginTabs/Login with existing account/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="ScrollContainer" type="ScrollContainer" parent="CanvasLayer/RegLogin/RegLoginTabs/Login with existing account/VBoxContainer/instructions"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/RegLogin/RegLoginTabs/Login with existing account/VBoxContainer/instructions/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="existing_account_container" type="VBoxContainer" parent="CanvasLayer/RegLogin/RegLoginTabs/Login with existing account/VBoxContainer/instructions/ScrollContainer/MarginContainer"]
+layout_mode = 2
+
+[node name="bottom" type="MarginContainer" parent="CanvasLayer/RegLogin/RegLoginTabs/Login with existing account/VBoxContainer"]
+custom_minimum_size = Vector2(0, 64)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+theme_override_constants/margin_left = 0
+
+[node name="leftSpace2" type="MarginContainer" parent="CanvasLayer/RegLogin/RegLoginTabs/Login with existing account"]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+
+[node name="confirmation" type="HBoxContainer" parent="CanvasLayer/RegLogin/RegLoginTabs"]
+visible = false
+layout_mode = 2
+tooltip_text = "please retype the numbers that are given
+
+after that you'll be able to be registered.
+if someone doesn't take your name before you.
+else you'll need to re try registration with different name"
+metadata/_tab_index = 4
+
+[node name="leftSpace" type="MarginContainer" parent="CanvasLayer/RegLogin/RegLoginTabs/confirmation"]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/RegLogin/RegLoginTabs/confirmation"]
+custom_minimum_size = Vector2(150, 50)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 6
+theme_override_constants/margin_left = 0
+
+[node name="buttonsContainer" type="VBoxContainer" parent="CanvasLayer/RegLogin/RegLoginTabs/confirmation/MarginContainer"]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="CanvasLayer/RegLogin/RegLoginTabs/confirmation/MarginContainer/buttonsContainer"]
+layout_mode = 2
+text = "please enter number:"
+
+[node name="LineEdit" type="LineEdit" parent="CanvasLayer/RegLogin/RegLoginTabs/confirmation/MarginContainer/buttonsContainer"]
+layout_mode = 2
+virtual_keyboard_type = 2
+
+[node name="Loged in accounts" type="HBoxContainer" parent="CanvasLayer/RegLogin/RegLoginTabs"]
+visible = false
+layout_mode = 2
+tooltip_text = "server container press on a button
+to disconnect the client"
+metadata/_tab_index = 5
+
+[node name="leftSpace" type="MarginContainer" parent="CanvasLayer/RegLogin/RegLoginTabs/Loged in accounts"]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/RegLogin/RegLoginTabs/Loged in accounts"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="top" type="MarginContainer" parent="CanvasLayer/RegLogin/RegLoginTabs/Loged in accounts/VBoxContainer"]
+custom_minimum_size = Vector2(0, 64)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+theme_override_constants/margin_left = 0
+
+[node name="instructions" type="MarginContainer" parent="CanvasLayer/RegLogin/RegLoginTabs/Loged in accounts/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="ScrollContainer" type="ScrollContainer" parent="CanvasLayer/RegLogin/RegLoginTabs/Loged in accounts/VBoxContainer/instructions"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/RegLogin/RegLoginTabs/Loged in accounts/VBoxContainer/instructions/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="accounts container" type="VBoxContainer" parent="CanvasLayer/RegLogin/RegLoginTabs/Loged in accounts/VBoxContainer/instructions/ScrollContainer/MarginContainer"]
+layout_mode = 2
+
+[node name="bottom" type="MarginContainer" parent="CanvasLayer/RegLogin/RegLoginTabs/Loged in accounts/VBoxContainer"]
+custom_minimum_size = Vector2(0, 64)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+theme_override_constants/margin_left = 0
+
+[node name="leftSpace2" type="MarginContainer" parent="CanvasLayer/RegLogin/RegLoginTabs/Loged in accounts"]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+
+[node name="Credits" type="HBoxContainer" parent="CanvasLayer/RegLogin/RegLoginTabs"]
+visible = false
+layout_mode = 2
+tooltip_text = "what licences I have used"
+metadata/_tab_index = 6
+
+[node name="leftSpace" type="MarginContainer" parent="CanvasLayer/RegLogin/RegLoginTabs/Credits"]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/RegLogin/RegLoginTabs/Credits"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="top" type="MarginContainer" parent="CanvasLayer/RegLogin/RegLoginTabs/Credits/VBoxContainer"]
+custom_minimum_size = Vector2(0, 64)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+theme_override_constants/margin_left = 0
+
+[node name="instructions" type="MarginContainer" parent="CanvasLayer/RegLogin/RegLoginTabs/Credits/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="ScrollContainer" type="ScrollContainer" parent="CanvasLayer/RegLogin/RegLoginTabs/Credits/VBoxContainer/instructions"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/RegLogin/RegLoginTabs/Credits/VBoxContainer/instructions/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="test container" type="VBoxContainer" parent="CanvasLayer/RegLogin/RegLoginTabs/Credits/VBoxContainer/instructions/ScrollContainer/MarginContainer"]
+layout_mode = 2
+script = ExtResource("10_di25w")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer/RegLogin/RegLoginTabs/Credits/VBoxContainer/instructions/ScrollContainer/MarginContainer/test container"]
+layout_mode = 2
+bbcode_enabled = true
+text = "MIT licences:
+
+1.  [url=https://godotengine.org/license/]godot engine licence[/url]
+
+2. [url=https://github.com/finepointcgi/Drag-Rescale-and-Drop-Windows/blob/main/LICENSE/]resize window[/url]
+
+3. [url=https://github.com/MarcoFazioRandom/Virtual-Joystick-Godot/blob/Main/LICENSE/]virtual joystick[/url]
+
+4. [url=https://www.cgtrader.com/]3d models[/url]
+
+5. [url=https://www.freesound.org/]sounds[/url]
+
+6. [url=https://architextures.org/]brick textures[/url]
+
+7. sounds and music made by David Fluher
+
+8. bow made by mess110"
+fit_content = true
+scroll_active = false
+
+[node name="bottom" type="MarginContainer" parent="CanvasLayer/RegLogin/RegLoginTabs/Credits/VBoxContainer"]
+custom_minimum_size = Vector2(0, 64)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+theme_override_constants/margin_left = 0
+
+[node name="leftSpace2" type="MarginContainer" parent="CanvasLayer/RegLogin/RegLoginTabs/Credits"]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+
+[node name="test" type="HBoxContainer" parent="CanvasLayer/RegLogin/RegLoginTabs"]
+visible = false
+layout_mode = 2
+tooltip_text = "testing functions to try if stuff works"
+metadata/_tab_index = 7
+
+[node name="leftSpace" type="MarginContainer" parent="CanvasLayer/RegLogin/RegLoginTabs/test"]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/RegLogin/RegLoginTabs/test"]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="top" type="MarginContainer" parent="CanvasLayer/RegLogin/RegLoginTabs/test/VBoxContainer"]
+custom_minimum_size = Vector2(0, 64)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+theme_override_constants/margin_left = 0
+
+[node name="instructions" type="MarginContainer" parent="CanvasLayer/RegLogin/RegLoginTabs/test/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="ScrollContainer" type="ScrollContainer" parent="CanvasLayer/RegLogin/RegLoginTabs/test/VBoxContainer/instructions"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/RegLogin/RegLoginTabs/test/VBoxContainer/instructions/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="test container" type="VBoxContainer" parent="CanvasLayer/RegLogin/RegLoginTabs/test/VBoxContainer/instructions/ScrollContainer/MarginContainer"]
+layout_mode = 2
+script = ExtResource("10_d6d6e")
+
+[node name="test remove all in savables" type="Button" parent="CanvasLayer/RegLogin/RegLoginTabs/test/VBoxContainer/instructions/ScrollContainer/MarginContainer/test container"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+text = "test remove all in savables"
+
+[node name="number test" type="LineEdit" parent="CanvasLayer/RegLogin/RegLoginTabs/test/VBoxContainer/instructions/ScrollContainer/MarginContainer/test container"]
+layout_mode = 2
+text = "2"
+placeholder_text = "choose number to test"
+
+[node name="record" type="Button" parent="CanvasLayer/RegLogin/RegLoginTabs/test/VBoxContainer/instructions/ScrollContainer/MarginContainer/test container"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+text = "record"
+
+[node name="play" type="Button" parent="CanvasLayer/RegLogin/RegLoginTabs/test/VBoxContainer/instructions/ScrollContainer/MarginContainer/test container"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+text = "play"
+
+[node name="start streaming" type="Button" parent="CanvasLayer/RegLogin/RegLoginTabs/test/VBoxContainer/instructions/ScrollContainer/MarginContainer/test container"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+text = "stream"
+
+[node name="bottom" type="MarginContainer" parent="CanvasLayer/RegLogin/RegLoginTabs/test/VBoxContainer"]
+custom_minimum_size = Vector2(0, 64)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+theme_override_constants/margin_left = 0
+
+[node name="leftSpace2" type="MarginContainer" parent="CanvasLayer/RegLogin/RegLoginTabs/test"]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+
+[node name="mold window" parent="CanvasLayer" instance=ExtResource("11_ehfvd")]
+layout_mode = 1
+
+[node name="MainMenu" type="Control" parent="CanvasLayer"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 80.0
+offset_top = 37.0
+offset_right = -85.0
+offset_bottom = -87.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_8fqb8")
+script = ExtResource("4_tnbuf")
+default_window_rect = Rect2(256, 100, 784, 486)
+minimum_window_size = Vector2(400, 225)
+
+[node name="MainMenuTabs" type="TabContainer" parent="CanvasLayer/MainMenu"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+current_tab = 1
+script = ExtResource("6_rdw4q")
+
+[node name="corg" type="TabContainer" parent="CanvasLayer/MainMenu/MainMenuTabs"]
+visible = false
+layout_mode = 2
+tooltip_text = "community organisation
+	Is for community good not for indivisuals.
+	If individual is too strong he's a little bit cut and given to the community."
+current_tab = 5
+script = ExtResource("7_spxhj")
+metadata/_tab_index = 0
+
+[node name="Moderator_place" type="HBoxContainer" parent="CanvasLayer/MainMenu/MainMenuTabs/corg"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 0
+
+[node name="left padding" type="MarginContainer" parent="CanvasLayer/MainMenu/MainMenuTabs/corg/Moderator_place"]
+custom_minimum_size = Vector2(64, 0)
+layout_mode = 2
+
+[node name="margin top2" type="MarginContainer" parent="CanvasLayer/MainMenu/MainMenuTabs/corg/Moderator_place"]
+custom_minimum_size = Vector2(300, 50)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/MainMenu/MainMenuTabs/corg/Moderator_place/margin top2"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/MainMenu/MainMenuTabs/corg/Moderator_place/margin top2/VBoxContainer"]
+custom_minimum_size = Vector2(0, 64)
+layout_mode = 2
+
+[node name="ScrollContainer" type="ScrollContainer" parent="CanvasLayer/MainMenu/MainMenuTabs/corg/Moderator_place/margin top2/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/MainMenu/MainMenuTabs/corg/Moderator_place/margin top2/VBoxContainer/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="mod pictures to approve container" type="VBoxContainer" parent="CanvasLayer/MainMenu/MainMenuTabs/corg/Moderator_place/margin top2/VBoxContainer/ScrollContainer/MarginContainer"]
+layout_mode = 2
+
+[node name="stats" type="TabContainer" parent="CanvasLayer/MainMenu/MainMenuTabs/corg"]
+visible = false
+layout_mode = 2
+current_tab = 0
+metadata/_tab_index = 1
+
+[node name="person" type="HBoxContainer" parent="CanvasLayer/MainMenu/MainMenuTabs/corg/stats"]
+layout_mode = 2
+metadata/_tab_index = 0
+
+[node name="left padding" type="MarginContainer" parent="CanvasLayer/MainMenu/MainMenuTabs/corg/stats/person"]
+custom_minimum_size = Vector2(64, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/MainMenu/MainMenuTabs/corg/stats/person"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/MainMenu/MainMenuTabs/corg/stats/person/MarginContainer"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/MainMenu/MainMenuTabs/corg/stats/person/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 64)
+layout_mode = 2
+
+[node name="ScrollContainer" type="ScrollContainer" parent="CanvasLayer/MainMenu/MainMenuTabs/corg/stats/person/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/MainMenu/MainMenuTabs/corg/stats/person/MarginContainer/VBoxContainer/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 3
+
+[node name="set stats" type="Button" parent="CanvasLayer/MainMenu/MainMenuTabs/corg/stats/person/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+text = "set stats"
+
+[node name="adds" type="HBoxContainer" parent="CanvasLayer/MainMenu/MainMenuTabs/corg/stats/person/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+
+[node name="adds time" type="Label" parent="CanvasLayer/MainMenu/MainMenuTabs/corg/stats/person/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/adds"]
+layout_mode = 2
+text = "adds time 0 no comercials
+"
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/MainMenu/MainMenuTabs/corg/stats/person/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/adds"]
+custom_minimum_size = Vector2(32, 0)
+layout_mode = 2
+
+[node name="submit person adds time" type="LineEdit" parent="CanvasLayer/MainMenu/MainMenuTabs/corg/stats/person/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/adds"]
+layout_mode = 2
+size_flags_horizontal = 3
+placeholder_text = "min time wait between comercials"
+expand_to_text_length = true
+
+[node name="honor" type="HBoxContainer" parent="CanvasLayer/MainMenu/MainMenuTabs/corg/stats/person/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="honor" type="Label" parent="CanvasLayer/MainMenu/MainMenuTabs/corg/stats/person/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/honor"]
+layout_mode = 2
+text = "honor
+"
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/MainMenu/MainMenuTabs/corg/stats/person/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/honor"]
+custom_minimum_size = Vector2(32, 0)
+layout_mode = 2
+
+[node name="honor number" type="Label" parent="CanvasLayer/MainMenu/MainMenuTabs/corg/stats/person/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/honor"]
+layout_mode = 2
+text = "0"
+
+[node name="username" type="HBoxContainer" parent="CanvasLayer/MainMenu/MainMenuTabs/corg/stats/person/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="username" type="Label" parent="CanvasLayer/MainMenu/MainMenuTabs/corg/stats/person/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/username"]
+layout_mode = 2
+text = "username"
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/MainMenu/MainMenuTabs/corg/stats/person/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/username"]
+custom_minimum_size = Vector2(32, 0)
+layout_mode = 2
+
+[node name="name" type="Label" parent="CanvasLayer/MainMenu/MainMenuTabs/corg/stats/person/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/username"]
+layout_mode = 2
+text = "0"
+
+[node name="employed at" type="HBoxContainer" parent="CanvasLayer/MainMenu/MainMenuTabs/corg/stats/person/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="employed at" type="Label" parent="CanvasLayer/MainMenu/MainMenuTabs/corg/stats/person/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/employed at"]
+layout_mode = 2
+text = "employed at"
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/MainMenu/MainMenuTabs/corg/stats/person/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/employed at"]
+custom_minimum_size = Vector2(32, 0)
+layout_mode = 2
+
+[node name="employed at label" type="Label" parent="CanvasLayer/MainMenu/MainMenuTabs/corg/stats/person/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/employed at"]
+layout_mode = 2
+text = "0"
+
+[node name="money" type="Label" parent="CanvasLayer/MainMenu/MainMenuTabs/corg/stats/person/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+text = "money"
+
+[node name="wheets" type="Label" parent="CanvasLayer/MainMenu/MainMenuTabs/corg/stats/person/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+text = "wheets"
+
+[node name="carrots" type="Label" parent="CanvasLayer/MainMenu/MainMenuTabs/corg/stats/person/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+text = "carrots"
+
+[node name="apples" type="Label" parent="CanvasLayer/MainMenu/MainMenuTabs/corg/stats/person/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+text = "apples"
+
+[node name="pineapples" type="Label" parent="CanvasLayer/MainMenu/MainMenuTabs/corg/stats/person/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+text = "pineapples"
+
+[node name="bananas" type="Label" parent="CanvasLayer/MainMenu/MainMenuTabs/corg/stats/person/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+text = "bananas"
+
+[node name="greyfruits" type="Label" parent="CanvasLayer/MainMenu/MainMenuTabs/corg/stats/person/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+text = "greyfruits"
+
+[node name="referrer" type="HBoxContainer" parent="CanvasLayer/MainMenu/MainMenuTabs/corg/stats/person/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="referrer" type="Label" parent="CanvasLayer/MainMenu/MainMenuTabs/corg/stats/person/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/referrer"]
+layout_mode = 2
+text = "referrer"
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/MainMenu/MainMenuTabs/corg/stats/person/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/referrer"]
+custom_minimum_size = Vector2(32, 0)
+layout_mode = 2
+
+[node name="whom" type="LineEdit" parent="CanvasLayer/MainMenu/MainMenuTabs/corg/stats/person/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/referrer"]
+layout_mode = 2
+expand_to_text_length = true
+
+[node name="corg" type="HBoxContainer" parent="CanvasLayer/MainMenu/MainMenuTabs/corg/stats"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 1
+
+[node name="left padding" type="MarginContainer" parent="CanvasLayer/MainMenu/MainMenuTabs/corg/stats/corg"]
+custom_minimum_size = Vector2(64, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/MainMenu/MainMenuTabs/corg/stats/corg"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/MainMenu/MainMenuTabs/corg/stats/corg/MarginContainer"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/MainMenu/MainMenuTabs/corg/stats/corg/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 32)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/MainMenu/MainMenuTabs/corg/stats/corg/MarginContainer/VBoxContainer/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+
+[node name="Button become corg" type="Button" parent="CanvasLayer/MainMenu/MainMenuTabs/corg/stats/corg/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+text = "become corg"
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/MainMenu/MainMenuTabs/corg/stats/corg/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(16, 0)
+layout_mode = 2
+
+[node name="apply to corg" type="LineEdit" parent="CanvasLayer/MainMenu/MainMenuTabs/corg/stats/corg/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+placeholder_text = "apply to corg"
+expand_to_text_length = true
+
+[node name="scroll corg stats" type="ScrollContainer" parent="CanvasLayer/MainMenu/MainMenuTabs/corg/stats/corg/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/MainMenu/MainMenuTabs/corg/stats/corg/MarginContainer/VBoxContainer/scroll corg stats"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="adds" type="HBoxContainer" parent="CanvasLayer/MainMenu/MainMenuTabs/corg/stats/corg/MarginContainer/VBoxContainer/scroll corg stats/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+
+[node name="adds time" type="Label" parent="CanvasLayer/MainMenu/MainMenuTabs/corg/stats/corg/MarginContainer/VBoxContainer/scroll corg stats/VBoxContainer/adds"]
+layout_mode = 2
+text = "adds time"
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/MainMenu/MainMenuTabs/corg/stats/corg/MarginContainer/VBoxContainer/scroll corg stats/VBoxContainer/adds"]
+custom_minimum_size = Vector2(32, 0)
+layout_mode = 2
+
+[node name="submit adds time" type="LineEdit" parent="CanvasLayer/MainMenu/MainMenuTabs/corg/stats/corg/MarginContainer/VBoxContainer/scroll corg stats/VBoxContainer/adds"]
+layout_mode = 2
+size_flags_horizontal = 3
+placeholder_text = "min time wait between comercials"
+expand_to_text_length = true
+
+[node name="adds pay" type="HBoxContainer" parent="CanvasLayer/MainMenu/MainMenuTabs/corg/stats/corg/MarginContainer/VBoxContainer/scroll corg stats/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+
+[node name="adds pay" type="Label" parent="CanvasLayer/MainMenu/MainMenuTabs/corg/stats/corg/MarginContainer/VBoxContainer/scroll corg stats/VBoxContainer/adds pay"]
+layout_mode = 2
+text = "adds pay"
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/MainMenu/MainMenuTabs/corg/stats/corg/MarginContainer/VBoxContainer/scroll corg stats/VBoxContainer/adds pay"]
+custom_minimum_size = Vector2(32, 0)
+layout_mode = 2
+
+[node name="submit adds pay" type="LineEdit" parent="CanvasLayer/MainMenu/MainMenuTabs/corg/stats/corg/MarginContainer/VBoxContainer/scroll corg stats/VBoxContainer/adds pay"]
+layout_mode = 2
+size_flags_horizontal = 3
+placeholder_text = "how much will you pay for each watched add"
+expand_to_text_length = true
+
+[node name="money" type="Label" parent="CanvasLayer/MainMenu/MainMenuTabs/corg/stats/corg/MarginContainer/VBoxContainer/scroll corg stats/VBoxContainer"]
+layout_mode = 2
+text = "money"
+
+[node name="wheets" type="Label" parent="CanvasLayer/MainMenu/MainMenuTabs/corg/stats/corg/MarginContainer/VBoxContainer/scroll corg stats/VBoxContainer"]
+layout_mode = 2
+text = "wheets"
+
+[node name="carrots" type="Label" parent="CanvasLayer/MainMenu/MainMenuTabs/corg/stats/corg/MarginContainer/VBoxContainer/scroll corg stats/VBoxContainer"]
+layout_mode = 2
+text = "carrots"
+
+[node name="apples" type="Label" parent="CanvasLayer/MainMenu/MainMenuTabs/corg/stats/corg/MarginContainer/VBoxContainer/scroll corg stats/VBoxContainer"]
+layout_mode = 2
+text = "apples"
+
+[node name="pineapples" type="Label" parent="CanvasLayer/MainMenu/MainMenuTabs/corg/stats/corg/MarginContainer/VBoxContainer/scroll corg stats/VBoxContainer"]
+layout_mode = 2
+text = "pineapples"
+
+[node name="bananas" type="Label" parent="CanvasLayer/MainMenu/MainMenuTabs/corg/stats/corg/MarginContainer/VBoxContainer/scroll corg stats/VBoxContainer"]
+layout_mode = 2
+text = "bananas"
+
+[node name="greyfruits" type="Label" parent="CanvasLayer/MainMenu/MainMenuTabs/corg/stats/corg/MarginContainer/VBoxContainer/scroll corg stats/VBoxContainer"]
+layout_mode = 2
+text = "greyfruits"
+
+[node name="marketplace" type="HBoxContainer" parent="CanvasLayer/MainMenu/MainMenuTabs/corg"]
+visible = false
+layout_mode = 2
+script = ExtResource("9_rbwfe")
+metadata/_tab_index = 2
+
+[node name="left padding" type="MarginContainer" parent="CanvasLayer/MainMenu/MainMenuTabs/corg/marketplace"]
+custom_minimum_size = Vector2(64, 50)
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/MainMenu/MainMenuTabs/corg/marketplace"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/MainMenu/MainMenuTabs/corg/marketplace/VBoxContainer"]
+custom_minimum_size = Vector2(0, 64)
+layout_mode = 2
+size_flags_vertical = 0
+
+[node name="ScrollContainer" type="ScrollContainer" parent="CanvasLayer/MainMenu/MainMenuTabs/corg/marketplace/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/MainMenu/MainMenuTabs/corg/marketplace/VBoxContainer/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/MainMenu/MainMenuTabs/corg/marketplace/VBoxContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="my store" type="Button" parent="CanvasLayer/MainMenu/MainMenuTabs/corg/marketplace/VBoxContainer/ScrollContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+text = "my store"
+
+[node name="previous 10" type="Button" parent="CanvasLayer/MainMenu/MainMenuTabs/corg/marketplace/VBoxContainer/ScrollContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+text = "previous 10"
+
+[node name="next 10" type="Button" parent="CanvasLayer/MainMenu/MainMenuTabs/corg/marketplace/VBoxContainer/ScrollContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+text = "next 10"
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/MainMenu/MainMenuTabs/corg/marketplace/VBoxContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 2
+
+[node name="traders container" type="VBoxContainer" parent="CanvasLayer/MainMenu/MainMenuTabs/corg/marketplace/VBoxContainer/ScrollContainer/VBoxContainer/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+
+[node name="workplace" type="HBoxContainer" parent="CanvasLayer/MainMenu/MainMenuTabs/corg"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 3
+
+[node name="TabContainer" type="TabContainer" parent="CanvasLayer/MainMenu/MainMenuTabs/corg/workplace"]
+layout_mode = 2
+size_flags_horizontal = 3
+current_tab = 0
+
+[node name="person workplace" type="VBoxContainer" parent="CanvasLayer/MainMenu/MainMenuTabs/corg/workplace/TabContainer"]
+layout_mode = 2
+metadata/_tab_index = 0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/MainMenu/MainMenuTabs/corg/workplace/TabContainer/person workplace"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="marginCenter" type="MarginContainer" parent="CanvasLayer/MainMenu/MainMenuTabs/corg/workplace/TabContainer/person workplace/HBoxContainer"]
+custom_minimum_size = Vector2(64, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/MainMenu/MainMenuTabs/corg/workplace/TabContainer/person workplace/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/MainMenu/MainMenuTabs/corg/workplace/TabContainer/person workplace/HBoxContainer/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/MainMenu/MainMenuTabs/corg/workplace/TabContainer/person workplace/HBoxContainer/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 64)
+layout_mode = 2
+size_flags_vertical = 0
+
+[node name="ScrollContainer" type="ScrollContainer" parent="CanvasLayer/MainMenu/MainMenuTabs/corg/workplace/TabContainer/person workplace/HBoxContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/MainMenu/MainMenuTabs/corg/workplace/TabContainer/person workplace/HBoxContainer/MarginContainer/VBoxContainer/ScrollContainer"]
+layout_mode = 2
+
+[node name="set stats" type="Button" parent="CanvasLayer/MainMenu/MainMenuTabs/corg/workplace/TabContainer/person workplace/HBoxContainer/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+text = "set stats"
+
+[node name="corg workplace" type="VBoxContainer" parent="CanvasLayer/MainMenu/MainMenuTabs/corg/workplace/TabContainer"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/MainMenu/MainMenuTabs/corg/workplace/TabContainer/corg workplace"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="marginCenter" type="MarginContainer" parent="CanvasLayer/MainMenu/MainMenuTabs/corg/workplace/TabContainer/corg workplace/HBoxContainer"]
+custom_minimum_size = Vector2(64, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/MainMenu/MainMenuTabs/corg/workplace/TabContainer/corg workplace/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/MainMenu/MainMenuTabs/corg/workplace/TabContainer/corg workplace/HBoxContainer/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/MainMenu/MainMenuTabs/corg/workplace/TabContainer/corg workplace/HBoxContainer/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 64)
+layout_mode = 2
+size_flags_vertical = 0
+
+[node name="ScrollContainer" type="ScrollContainer" parent="CanvasLayer/MainMenu/MainMenuTabs/corg/workplace/TabContainer/corg workplace/HBoxContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/MainMenu/MainMenuTabs/corg/workplace/TabContainer/corg workplace/HBoxContainer/MarginContainer/VBoxContainer/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="workers container" type="VBoxContainer" parent="CanvasLayer/MainMenu/MainMenuTabs/corg/workplace/TabContainer/corg workplace/HBoxContainer/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+
+[node name="applicators container" type="VBoxContainer" parent="CanvasLayer/MainMenu/MainMenuTabs/corg/workplace/TabContainer/corg workplace/HBoxContainer/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+
+[node name="applicators Label" type="Label" parent="CanvasLayer/MainMenu/MainMenuTabs/corg/workplace/TabContainer/corg workplace/HBoxContainer/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/applicators container"]
+layout_mode = 2
+text = "applicators"
+
+[node name="law" type="HBoxContainer" parent="CanvasLayer/MainMenu/MainMenuTabs/corg"]
+visible = false
+layout_mode = 2
+script = ExtResource("11_6rvsr")
+metadata/_tab_index = 4
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/MainMenu/MainMenuTabs/corg/law"]
+custom_minimum_size = Vector2(128, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+
+[node name="ScrollContainer" type="ScrollContainer" parent="CanvasLayer/MainMenu/MainMenuTabs/corg/law"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="law_types" type="VBoxContainer" parent="CanvasLayer/MainMenu/MainMenuTabs/corg/law/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/MainMenu/MainMenuTabs/corg/law/ScrollContainer/law_types"]
+custom_minimum_size = Vector2(0, 64)
+layout_mode = 2
+
+[node name="spenders" type="TabContainer" parent="CanvasLayer/MainMenu/MainMenuTabs/corg"]
+layout_mode = 2
+current_tab = 0
+script = ExtResource("12_0312a")
+metadata/_tab_index = 5
+
+[node name="applied" type="HBoxContainer" parent="CanvasLayer/MainMenu/MainMenuTabs/corg/spenders"]
+layout_mode = 2
+metadata/_tab_index = 0
+
+[node name="marginCenter" type="MarginContainer" parent="CanvasLayer/MainMenu/MainMenuTabs/corg/spenders/applied"]
+custom_minimum_size = Vector2(128, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/MainMenu/MainMenuTabs/corg/spenders/applied"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/MainMenu/MainMenuTabs/corg/spenders/applied/VBoxContainer"]
+custom_minimum_size = Vector2(0, 64)
+layout_mode = 2
+
+[node name="ScrollContainer" type="ScrollContainer" parent="CanvasLayer/MainMenu/MainMenuTabs/corg/spenders/applied/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="applied container" type="VBoxContainer" parent="CanvasLayer/MainMenu/MainMenuTabs/corg/spenders/applied/VBoxContainer/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="apply for spender" type="Button" parent="CanvasLayer/MainMenu/MainMenuTabs/corg/spenders/applied/VBoxContainer/ScrollContainer/applied container"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+text = "apply to become spender"
+
+[node name="confirmed" type="HBoxContainer" parent="CanvasLayer/MainMenu/MainMenuTabs/corg/spenders"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 1
+
+[node name="marginCenter" type="MarginContainer" parent="CanvasLayer/MainMenu/MainMenuTabs/corg/spenders/confirmed"]
+custom_minimum_size = Vector2(128, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/MainMenu/MainMenuTabs/corg/spenders/confirmed"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/MainMenu/MainMenuTabs/corg/spenders/confirmed/VBoxContainer"]
+custom_minimum_size = Vector2(0, 64)
+layout_mode = 2
+
+[node name="ScrollContainer" type="ScrollContainer" parent="CanvasLayer/MainMenu/MainMenuTabs/corg/spenders/confirmed/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="confirmed container" type="VBoxContainer" parent="CanvasLayer/MainMenu/MainMenuTabs/corg/spenders/confirmed/VBoxContainer/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="banned" type="HBoxContainer" parent="CanvasLayer/MainMenu/MainMenuTabs/corg/spenders"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 2
+
+[node name="marginCenter" type="MarginContainer" parent="CanvasLayer/MainMenu/MainMenuTabs/corg/spenders/banned"]
+custom_minimum_size = Vector2(128, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/MainMenu/MainMenuTabs/corg/spenders/banned"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/MainMenu/MainMenuTabs/corg/spenders/banned/VBoxContainer"]
+custom_minimum_size = Vector2(0, 64)
+layout_mode = 2
+
+[node name="ScrollContainer" type="ScrollContainer" parent="CanvasLayer/MainMenu/MainMenuTabs/corg/spenders/banned/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="banned container" type="VBoxContainer" parent="CanvasLayer/MainMenu/MainMenuTabs/corg/spenders/banned/VBoxContainer/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="options" type="TabContainer" parent="CanvasLayer/MainMenu/MainMenuTabs" node_paths=PackedStringArray("new_password", "confirm_password", "old_password", "other_computers_can_come_in", "other_clients_can_come_in", "speach_dialogs", "font_size_text", "audio_container")]
+layout_mode = 2
+current_tab = 2
+script = ExtResource("7_ud4cm")
+new_password = NodePath("security/HBoxContainer/MarginContainer/security/container/VBoxContainer/new password")
+confirm_password = NodePath("security/HBoxContainer/MarginContainer/security/container/VBoxContainer/confirm password")
+old_password = NodePath("security/HBoxContainer/MarginContainer/security/container/VBoxContainer/old password")
+other_computers_can_come_in = NodePath("security/HBoxContainer/MarginContainer/security/container/VBoxContainer/other computers can come in")
+other_clients_can_come_in = NodePath("security/HBoxContainer/MarginContainer/security/container/VBoxContainer/other clients can come in")
+speach_dialogs = NodePath("audio/HBoxContainer/MarginContainer/audio container/speach CheckBox")
+font_size_text = NodePath("misc/HBoxContainer/MarginContainer/audio container/font size")
+font_size = ExtResource("1_8fqb8")
+audio_container = NodePath("audio/HBoxContainer/MarginContainer/audio container")
+metadata/_tab_index = 1
+
+[node name="security" type="ScrollContainer" parent="CanvasLayer/MainMenu/MainMenuTabs/options"]
+visible = false
+layout_mode = 2
+tooltip_text = "if you want to change the options
+you need to provide your password
+
+if you want to change password too
+than you need to provide 2x same new password
+and old password that
+matches your current password"
+metadata/_tab_index = 0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/MainMenu/MainMenuTabs/options/security"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="left padding" type="MarginContainer" parent="CanvasLayer/MainMenu/MainMenuTabs/options/security/HBoxContainer"]
+custom_minimum_size = Vector2(64, 0)
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/MainMenu/MainMenuTabs/options/security/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="security" type="VBoxContainer" parent="CanvasLayer/MainMenu/MainMenuTabs/options/security/HBoxContainer/MarginContainer"]
+layout_mode = 2
+
+[node name="top padding" type="MarginContainer" parent="CanvasLayer/MainMenu/MainMenuTabs/options/security/HBoxContainer/MarginContainer/security"]
+custom_minimum_size = Vector2(0, 64)
+layout_mode = 2
+
+[node name="container" type="MarginContainer" parent="CanvasLayer/MainMenu/MainMenuTabs/options/security/HBoxContainer/MarginContainer/security"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/MainMenu/MainMenuTabs/options/security/HBoxContainer/MarginContainer/security/container"]
+layout_mode = 2
+
+[node name="new password" type="LineEdit" parent="CanvasLayer/MainMenu/MainMenuTabs/options/security/HBoxContainer/MarginContainer/security/container/VBoxContainer"]
+layout_mode = 2
+placeholder_text = "new passsword"
+
+[node name="confirm password" type="LineEdit" parent="CanvasLayer/MainMenu/MainMenuTabs/options/security/HBoxContainer/MarginContainer/security/container/VBoxContainer"]
+layout_mode = 2
+placeholder_text = "confirm password"
+
+[node name="old password" type="LineEdit" parent="CanvasLayer/MainMenu/MainMenuTabs/options/security/HBoxContainer/MarginContainer/security/container/VBoxContainer"]
+layout_mode = 2
+placeholder_text = "old password"
+
+[node name="other computers can come in" type="CheckBox" parent="CanvasLayer/MainMenu/MainMenuTabs/options/security/HBoxContainer/MarginContainer/security/container/VBoxContainer"]
+layout_mode = 2
+button_pressed = true
+text = "other computers can come in"
+
+[node name="other clients can come in" type="CheckBox" parent="CanvasLayer/MainMenu/MainMenuTabs/options/security/HBoxContainer/MarginContainer/security/container/VBoxContainer"]
+layout_mode = 2
+button_pressed = true
+text = "other clients can come in"
+
+[node name="Button" type="Button" parent="CanvasLayer/MainMenu/MainMenuTabs/options/security/HBoxContainer/MarginContainer/security/container/VBoxContainer"]
+layout_mode = 2
+text = "submit new security protocol"
+
+[node name="mac pending" type="Button" parent="CanvasLayer/MainMenu/MainMenuTabs/options/security/HBoxContainer/MarginContainer/security/container/VBoxContainer"]
+layout_mode = 2
+text = "ban or approve mac"
+
+[node name="audio" type="ScrollContainer" parent="CanvasLayer/MainMenu/MainMenuTabs/options"]
+visible = false
+layout_mode = 2
+tooltip_text = "audio of profile"
+metadata/_tab_index = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/MainMenu/MainMenuTabs/options/audio"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="left padding" type="MarginContainer" parent="CanvasLayer/MainMenu/MainMenuTabs/options/audio/HBoxContainer"]
+custom_minimum_size = Vector2(64, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/MainMenu/MainMenuTabs/options/audio/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="audio container" type="VBoxContainer" parent="CanvasLayer/MainMenu/MainMenuTabs/options/audio/HBoxContainer/MarginContainer"]
+layout_mode = 2
+
+[node name="top padding" type="MarginContainer" parent="CanvasLayer/MainMenu/MainMenuTabs/options/audio/HBoxContainer/MarginContainer/audio container"]
+custom_minimum_size = Vector2(0, 64)
+layout_mode = 2
+
+[node name="speach CheckBox" type="CheckBox" parent="CanvasLayer/MainMenu/MainMenuTabs/options/audio/HBoxContainer/MarginContainer/audio container"]
+layout_mode = 2
+size_flags_horizontal = 0
+tooltip_text = "npc will speach in broken english"
+text = "speach dialogs"
+
+[node name="master" parent="CanvasLayer/MainMenu/MainMenuTabs/options/audio/HBoxContainer/MarginContainer/audio container" instance=ExtResource("21_485uo")]
+layout_mode = 2
+volume_name = "master"
+db_name = "master_volume"
+bus_name = "Master"
+
+[node name="record" parent="CanvasLayer/MainMenu/MainMenuTabs/options/audio/HBoxContainer/MarginContainer/audio container" instance=ExtResource("21_485uo")]
+layout_mode = 2
+volume_name = "record"
+db_name = "record_volume"
+bus_name = "Record"
+
+[node name="music" parent="CanvasLayer/MainMenu/MainMenuTabs/options/audio/HBoxContainer/MarginContainer/audio container" instance=ExtResource("21_485uo")]
+layout_mode = 2
+db_name = "music_volume"
+bus_name = "music"
+
+[node name="foot steps" parent="CanvasLayer/MainMenu/MainMenuTabs/options/audio/HBoxContainer/MarginContainer/audio container" instance=ExtResource("21_485uo")]
+layout_mode = 2
+volume_name = "foot steps"
+db_name = "foot_steps_volume"
+bus_name = "foot steps"
+
+[node name="level up" parent="CanvasLayer/MainMenu/MainMenuTabs/options/audio/HBoxContainer/MarginContainer/audio container" instance=ExtResource("21_485uo")]
+layout_mode = 2
+volume_name = "level up"
+db_name = "level_up_volume"
+bus_name = "level up"
+
+[node name="talk" parent="CanvasLayer/MainMenu/MainMenuTabs/options/audio/HBoxContainer/MarginContainer/audio container" instance=ExtResource("21_485uo")]
+layout_mode = 2
+volume_name = "talk"
+db_name = "talk"
+bus_name = "talk"
+
+[node name="working sounds" parent="CanvasLayer/MainMenu/MainMenuTabs/options/audio/HBoxContainer/MarginContainer/audio container" instance=ExtResource("21_485uo")]
+layout_mode = 2
+volume_name = "workig sounds"
+db_name = "working_sounds"
+bus_name = "working sounds"
+
+[node name="misc" type="ScrollContainer" parent="CanvasLayer/MainMenu/MainMenuTabs/options"]
+layout_mode = 2
+tooltip_text = "audio of profile"
+metadata/_tab_index = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/MainMenu/MainMenuTabs/options/misc"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="left padding" type="MarginContainer" parent="CanvasLayer/MainMenu/MainMenuTabs/options/misc/HBoxContainer"]
+custom_minimum_size = Vector2(64, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/MainMenu/MainMenuTabs/options/misc/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="audio container" type="VBoxContainer" parent="CanvasLayer/MainMenu/MainMenuTabs/options/misc/HBoxContainer/MarginContainer"]
+layout_mode = 2
+
+[node name="top padding" type="MarginContainer" parent="CanvasLayer/MainMenu/MainMenuTabs/options/misc/HBoxContainer/MarginContainer/audio container"]
+custom_minimum_size = Vector2(0, 64)
+layout_mode = 2
+
+[node name="font size" type="LineEdit" parent="CanvasLayer/MainMenu/MainMenuTabs/options/misc/HBoxContainer/MarginContainer/audio container"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+placeholder_text = "font size"
+expand_to_text_length = true
+virtual_keyboard_type = 2
+
+[node name="social" type="TabContainer" parent="CanvasLayer/MainMenu/MainMenuTabs"]
+visible = false
+layout_mode = 2
+tooltip_text = "use it for socialize with others but no hatefull speach!!!"
+current_tab = 0
+script = ExtResource("7_ynbhv")
+metadata/_tab_index = 2
+
+[node name="forum" type="ScrollContainer" parent="CanvasLayer/MainMenu/MainMenuTabs/social"]
+layout_mode = 2
+metadata/_tab_index = 0
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/MainMenu/MainMenuTabs/social/forum"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="forum" type="TabContainer" parent="CanvasLayer/MainMenu/MainMenuTabs/social/forum/MarginContainer"]
+layout_mode = 2
+
+[node name="quit" type="HBoxContainer" parent="CanvasLayer/MainMenu/MainMenuTabs"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 3
+
+[node name="marginCenter" type="MarginContainer" parent="CanvasLayer/MainMenu/MainMenuTabs/quit"]
+custom_minimum_size = Vector2(300, 50)
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/MainMenu/MainMenuTabs/quit/marginCenter"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/MainMenu/MainMenuTabs/quit/marginCenter/VBoxContainer"]
+layout_mode = 2
+
+[node name="MarginContainerLogOut" type="MarginContainer" parent="CanvasLayer/MainMenu/MainMenuTabs/quit/marginCenter/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="logout" type="Button" parent="CanvasLayer/MainMenu/MainMenuTabs/quit/marginCenter/VBoxContainer/HBoxContainer/MarginContainerLogOut"]
+layout_mode = 2
+text = "logout"
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/MainMenu/MainMenuTabs/quit/marginCenter/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+
+[node name="MarginContainerQuit" type="MarginContainer" parent="CanvasLayer/MainMenu/MainMenuTabs/quit/marginCenter/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="quit" type="Button" parent="CanvasLayer/MainMenu/MainMenuTabs/quit/marginCenter/VBoxContainer/HBoxContainer/MarginContainerQuit"]
+layout_mode = 2
+text = "quit"
+
+[node name="Admin" type="TabContainer" parent="CanvasLayer/MainMenu/MainMenuTabs" node_paths=PackedStringArray("id_players_container")]
+visible = false
+layout_mode = 2
+current_tab = 0
+script = ExtResource("25_gr7ec")
+id_players_container = NodePath("players/id players container")
+metadata/_tab_index = 4
+
+[node name="players" type="ScrollContainer" parent="CanvasLayer/MainMenu/MainMenuTabs/Admin"]
+layout_mode = 2
+metadata/_tab_index = 0
+
+[node name="id players container" type="VBoxContainer" parent="CanvasLayer/MainMenu/MainMenuTabs/Admin/players"]
+layout_mode = 2
+size_flags_horizontal = 2
+
+[node name="disconnect all" type="Button" parent="CanvasLayer/MainMenu/MainMenuTabs/Admin/players/id players container"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "disconnect all players"
+
+[node name="WelcomeUnwelcome" type="Control" parent="CanvasLayer"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 141.0
+offset_top = 100.0
+offset_right = -205.0
+offset_bottom = -117.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_8fqb8")
+script = ExtResource("4_tnbuf")
+default_window_rect = Rect2(256, 100, 512, 256)
+
+[node name="WelcomeUnwelcomeTabs" type="TabContainer" parent="CanvasLayer/WelcomeUnwelcome" node_paths=PackedStringArray("entered_with_label")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+current_tab = 1
+script = ExtResource("6_111yf")
+entered_with_label = NodePath("approved/MarginContainer/ScrollContainer/MarginContainer/approvedContainer/entered with")
+
+[node name="banned" type="HBoxContainer" parent="CanvasLayer/WelcomeUnwelcome/WelcomeUnwelcomeTabs"]
+visible = false
+layout_mode = 2
+tooltip_text = "banned ids cannot enter your accout at all"
+metadata/_tab_index = 0
+
+[node name="leftSpace" type="MarginContainer" parent="CanvasLayer/WelcomeUnwelcome/WelcomeUnwelcomeTabs/banned"]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+
+[node name="Marginscroll" type="MarginContainer" parent="CanvasLayer/WelcomeUnwelcome/WelcomeUnwelcomeTabs/banned"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="ScrollContainer" type="ScrollContainer" parent="CanvasLayer/WelcomeUnwelcome/WelcomeUnwelcomeTabs/banned/Marginscroll"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/WelcomeUnwelcome/WelcomeUnwelcomeTabs/banned/Marginscroll/ScrollContainer"]
+custom_minimum_size = Vector2(150, 50)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 6
+theme_override_constants/margin_left = 0
+
+[node name="bannedContainer" type="VBoxContainer" parent="CanvasLayer/WelcomeUnwelcome/WelcomeUnwelcomeTabs/banned/Marginscroll/ScrollContainer/MarginContainer"]
+layout_mode = 2
+
+[node name="X" type="MarginContainer" parent="CanvasLayer/WelcomeUnwelcome/WelcomeUnwelcomeTabs/banned"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 0
+
+[node name="X" type="Button" parent="CanvasLayer/WelcomeUnwelcome/WelcomeUnwelcomeTabs/banned/X"]
+layout_mode = 2
+text = "X"
+
+[node name="pending" type="HBoxContainer" parent="CanvasLayer/WelcomeUnwelcome/WelcomeUnwelcomeTabs"]
+layout_mode = 2
+tooltip_text = "pending ids can enter but cannot touch your security settings or even buy stuff on corg
+
+but can play your game"
+metadata/_tab_index = 1
+
+[node name="leftSpace" type="MarginContainer" parent="CanvasLayer/WelcomeUnwelcome/WelcomeUnwelcomeTabs/pending"]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+
+[node name="MarginScroll" type="MarginContainer" parent="CanvasLayer/WelcomeUnwelcome/WelcomeUnwelcomeTabs/pending"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="ScrollContainer" type="ScrollContainer" parent="CanvasLayer/WelcomeUnwelcome/WelcomeUnwelcomeTabs/pending/MarginScroll"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/WelcomeUnwelcome/WelcomeUnwelcomeTabs/pending/MarginScroll/ScrollContainer"]
+custom_minimum_size = Vector2(150, 50)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 6
+theme_override_constants/margin_left = 0
+
+[node name="pendingContainer" type="VBoxContainer" parent="CanvasLayer/WelcomeUnwelcome/WelcomeUnwelcomeTabs/pending/MarginScroll/ScrollContainer/MarginContainer"]
+layout_mode = 2
+
+[node name="X" type="MarginContainer" parent="CanvasLayer/WelcomeUnwelcome/WelcomeUnwelcomeTabs/pending"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 0
+
+[node name="X" type="Button" parent="CanvasLayer/WelcomeUnwelcome/WelcomeUnwelcomeTabs/pending/X"]
+layout_mode = 2
+text = "X"
+
+[node name="approved" type="HBoxContainer" parent="CanvasLayer/WelcomeUnwelcome/WelcomeUnwelcomeTabs"]
+visible = false
+layout_mode = 2
+tooltip_text = "approved ids have full access to your account"
+metadata/_tab_index = 2
+
+[node name="leftSpace" type="MarginContainer" parent="CanvasLayer/WelcomeUnwelcome/WelcomeUnwelcomeTabs/approved"]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/WelcomeUnwelcome/WelcomeUnwelcomeTabs/approved"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="ScrollContainer" type="ScrollContainer" parent="CanvasLayer/WelcomeUnwelcome/WelcomeUnwelcomeTabs/approved/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/WelcomeUnwelcome/WelcomeUnwelcomeTabs/approved/MarginContainer/ScrollContainer"]
+custom_minimum_size = Vector2(150, 50)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 6
+theme_override_constants/margin_left = 0
+
+[node name="approvedContainer" type="VBoxContainer" parent="CanvasLayer/WelcomeUnwelcome/WelcomeUnwelcomeTabs/approved/MarginContainer/ScrollContainer/MarginContainer"]
+layout_mode = 2
+
+[node name="entered with" type="Label" parent="CanvasLayer/WelcomeUnwelcome/WelcomeUnwelcomeTabs/approved/MarginContainer/ScrollContainer/MarginContainer/approvedContainer"]
+layout_mode = 2
+text = "you entered with:"
+
+[node name="X" type="MarginContainer" parent="CanvasLayer/WelcomeUnwelcome/WelcomeUnwelcomeTabs/approved"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 0
+
+[node name="X" type="Button" parent="CanvasLayer/WelcomeUnwelcome/WelcomeUnwelcomeTabs/approved/X"]
+layout_mode = 2
+text = "X"
+
+[node name="corg apply to be approved" type="Control" parent="CanvasLayer"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 141.0
+offset_top = 100.0
+offset_right = -205.0
+offset_bottom = -117.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_8fqb8")
+script = ExtResource("4_tnbuf")
+
+[node name="corg apply to be approved tabs" type="TabContainer" parent="CanvasLayer/corg apply to be approved"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+current_tab = 0
+script = ExtResource("11_c6r24")
+
+[node name="face" type="HBoxContainer" parent="CanvasLayer/corg apply to be approved/corg apply to be approved tabs"]
+layout_mode = 2
+tooltip_text = "get picture of your face"
+metadata/_tab_index = 0
+
+[node name="leftSpace" type="MarginContainer" parent="CanvasLayer/corg apply to be approved/corg apply to be approved tabs/face"]
+custom_minimum_size = Vector2(64, 0)
+layout_mode = 2
+
+[node name="Marginscroll" type="MarginContainer" parent="CanvasLayer/corg apply to be approved/corg apply to be approved tabs/face"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="ScrollContainer" type="ScrollContainer" parent="CanvasLayer/corg apply to be approved/corg apply to be approved tabs/face/Marginscroll"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="bannedContainer" type="VBoxContainer" parent="CanvasLayer/corg apply to be approved/corg apply to be approved tabs/face/Marginscroll/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="top padding" type="MarginContainer" parent="CanvasLayer/corg apply to be approved/corg apply to be approved tabs/face/Marginscroll/ScrollContainer/bannedContainer"]
+custom_minimum_size = Vector2(0, 64)
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_constants/margin_left = 0
+
+[node name="picture data" type="MarginContainer" parent="CanvasLayer/corg apply to be approved/corg apply to be approved tabs/face/Marginscroll/ScrollContainer/bannedContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="face picture" type="TextureRect" parent="CanvasLayer/corg apply to be approved/corg apply to be approved tabs/face/Marginscroll/ScrollContainer/bannedContainer/picture data"]
+layout_mode = 2
+stretch_mode = 4
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/corg apply to be approved/corg apply to be approved tabs/face/Marginscroll/ScrollContainer/bannedContainer"]
+custom_minimum_size = Vector2(0, 32)
+layout_mode = 2
+
+[node name="Button" type="Button" parent="CanvasLayer/corg apply to be approved/corg apply to be approved tabs/face/Marginscroll/ScrollContainer/bannedContainer/MarginContainer"]
+layout_mode = 2
+text = "add face picture"
+
+[node name="X" type="MarginContainer" parent="CanvasLayer/corg apply to be approved/corg apply to be approved tabs/face"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 0
+
+[node name="X" type="Button" parent="CanvasLayer/corg apply to be approved/corg apply to be approved tabs/face/X"]
+layout_mode = 2
+text = "X"
+
+[node name="id face" type="HBoxContainer" parent="CanvasLayer/corg apply to be approved/corg apply to be approved tabs"]
+visible = false
+layout_mode = 2
+tooltip_text = "get picture of your id card"
+metadata/_tab_index = 1
+
+[node name="leftSpace" type="MarginContainer" parent="CanvasLayer/corg apply to be approved/corg apply to be approved tabs/id face"]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+
+[node name="Marginscroll" type="MarginContainer" parent="CanvasLayer/corg apply to be approved/corg apply to be approved tabs/id face"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="ScrollContainer" type="ScrollContainer" parent="CanvasLayer/corg apply to be approved/corg apply to be approved tabs/id face/Marginscroll"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="bannedContainer" type="VBoxContainer" parent="CanvasLayer/corg apply to be approved/corg apply to be approved tabs/id face/Marginscroll/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="top padding" type="MarginContainer" parent="CanvasLayer/corg apply to be approved/corg apply to be approved tabs/id face/Marginscroll/ScrollContainer/bannedContainer"]
+custom_minimum_size = Vector2(0, 64)
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_constants/margin_left = 0
+
+[node name="picture data" type="MarginContainer" parent="CanvasLayer/corg apply to be approved/corg apply to be approved tabs/id face/Marginscroll/ScrollContainer/bannedContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="id face picture" type="TextureRect" parent="CanvasLayer/corg apply to be approved/corg apply to be approved tabs/id face/Marginscroll/ScrollContainer/bannedContainer/picture data"]
+layout_mode = 2
+stretch_mode = 4
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/corg apply to be approved/corg apply to be approved tabs/id face/Marginscroll/ScrollContainer/bannedContainer"]
+custom_minimum_size = Vector2(0, 32)
+layout_mode = 2
+
+[node name="Button" type="Button" parent="CanvasLayer/corg apply to be approved/corg apply to be approved tabs/id face/Marginscroll/ScrollContainer/bannedContainer/MarginContainer"]
+layout_mode = 2
+text = "add face picture"
+
+[node name="X" type="MarginContainer" parent="CanvasLayer/corg apply to be approved/corg apply to be approved tabs/id face"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 0
+
+[node name="X" type="Button" parent="CanvasLayer/corg apply to be approved/corg apply to be approved tabs/id face/X"]
+layout_mode = 2
+text = "X"
+
+[node name="submit pictures" type="HBoxContainer" parent="CanvasLayer/corg apply to be approved/corg apply to be approved tabs"]
+visible = false
+layout_mode = 2
+tooltip_text = "please enter your id number of your id card and submit to become corg member."
+metadata/_tab_index = 2
+
+[node name="leftSpace" type="MarginContainer" parent="CanvasLayer/corg apply to be approved/corg apply to be approved tabs/submit pictures"]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/corg apply to be approved/corg apply to be approved tabs/submit pictures"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="approvedContainer" type="VBoxContainer" parent="CanvasLayer/corg apply to be approved/corg apply to be approved tabs/submit pictures/MarginContainer"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/corg apply to be approved/corg apply to be approved tabs/submit pictures/MarginContainer/approvedContainer"]
+custom_minimum_size = Vector2(0, 64)
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_constants/margin_left = 0
+
+[node name="ID number" type="LineEdit" parent="CanvasLayer/corg apply to be approved/corg apply to be approved tabs/submit pictures/MarginContainer/approvedContainer"]
+layout_mode = 2
+placeholder_text = "enter ID number from  the ID picture"
+
+[node name="Button" type="Button" parent="CanvasLayer/corg apply to be approved/corg apply to be approved tabs/submit pictures/MarginContainer/approvedContainer"]
+layout_mode = 2
+text = "submit both pictures and ID number"
+
+[node name="X" type="MarginContainer" parent="CanvasLayer/corg apply to be approved/corg apply to be approved tabs/submit pictures"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 0
+
+[node name="X" type="Button" parent="CanvasLayer/corg apply to be approved/corg apply to be approved tabs/submit pictures/X"]
+layout_mode = 2
+text = "X"
+
+[node name="worker window" type="Control" parent="CanvasLayer"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 141.0
+offset_top = 100.0
+offset_right = -205.0
+offset_bottom = -117.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_8fqb8")
+script = ExtResource("4_tnbuf")
+minimum_window_size = Vector2(315, 225)
+
+[node name="worker tab" type="TabContainer" parent="CanvasLayer/worker window"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+current_tab = 0
+tabs_visible = false
+script = ExtResource("15_qov0t")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/worker window/worker tab"]
+layout_mode = 2
+tooltip_text = "you can customize this worker if he's employed at your corg"
+metadata/_tab_index = 0
+
+[node name="leftSpace" type="MarginContainer" parent="CanvasLayer/worker window/worker tab/HBoxContainer"]
+custom_minimum_size = Vector2(64, 0)
+layout_mode = 2
+
+[node name="Marginscroll" type="MarginContainer" parent="CanvasLayer/worker window/worker tab/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="ScrollContainer" type="ScrollContainer" parent="CanvasLayer/worker window/worker tab/HBoxContainer/Marginscroll"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="workerContainer" type="VBoxContainer" parent="CanvasLayer/worker window/worker tab/HBoxContainer/Marginscroll/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="top padding" type="MarginContainer" parent="CanvasLayer/worker window/worker tab/HBoxContainer/Marginscroll/ScrollContainer/workerContainer"]
+custom_minimum_size = Vector2(0, 64)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_constants/margin_left = 0
+
+[node name="username" type="Label" parent="CanvasLayer/worker window/worker tab/HBoxContainer/Marginscroll/ScrollContainer/workerContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+text = "username"
+
+[node name="fire hire" type="Button" parent="CanvasLayer/worker window/worker tab/HBoxContainer/Marginscroll/ScrollContainer/workerContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+text = "fire / hire"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/worker window/worker tab/HBoxContainer/Marginscroll/ScrollContainer/workerContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="Label" type="Label" parent="CanvasLayer/worker window/worker tab/HBoxContainer/Marginscroll/ScrollContainer/workerContainer/HBoxContainer"]
+layout_mode = 2
+text = "salary in apples / hour"
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/worker window/worker tab/HBoxContainer/Marginscroll/ScrollContainer/workerContainer/HBoxContainer"]
+custom_minimum_size = Vector2(16, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="salary" type="LineEdit" parent="CanvasLayer/worker window/worker tab/HBoxContainer/Marginscroll/ScrollContainer/workerContainer/HBoxContainer"]
+layout_mode = 2
+placeholder_text = "5 min 25 max"
+expand_to_text_length = true
+virtual_keyboard_type = 3
+
+[node name="biography" type="Label" parent="CanvasLayer/worker window/worker tab/HBoxContainer/Marginscroll/ScrollContainer/workerContainer"]
+custom_minimum_size = Vector2(0.075, 0)
+layout_mode = 2
+autowrap_mode = 3
+
+[node name="X" type="MarginContainer" parent="CanvasLayer/worker window/worker tab/HBoxContainer"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 0
+
+[node name="X" type="Button" parent="CanvasLayer/worker window/worker tab/HBoxContainer/X"]
+layout_mode = 2
+text = "X"
+
+[node name="account worker stats" type="Control" parent="CanvasLayer"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 141.0
+offset_top = 100.0
+offset_right = -205.0
+offset_bottom = -117.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_8fqb8")
+script = ExtResource("4_tnbuf")
+minimum_window_size = Vector2(315, 225)
+
+[node name="worker tab" type="TabContainer" parent="CanvasLayer/account worker stats"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+current_tab = 0
+tabs_visible = false
+script = ExtResource("16_imobw")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/account worker stats/worker tab"]
+layout_mode = 2
+tooltip_text = "customize your profile on corg"
+metadata/_tab_index = 0
+
+[node name="leftSpace" type="MarginContainer" parent="CanvasLayer/account worker stats/worker tab/HBoxContainer"]
+custom_minimum_size = Vector2(64, 0)
+layout_mode = 2
+
+[node name="Marginscroll" type="MarginContainer" parent="CanvasLayer/account worker stats/worker tab/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="ScrollContainer" type="ScrollContainer" parent="CanvasLayer/account worker stats/worker tab/HBoxContainer/Marginscroll"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/account worker stats/worker tab/HBoxContainer/Marginscroll/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="top padding" type="MarginContainer" parent="CanvasLayer/account worker stats/worker tab/HBoxContainer/Marginscroll/ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 64)
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_constants/margin_left = 0
+
+[node name="username" type="Label" parent="CanvasLayer/account worker stats/worker tab/HBoxContainer/Marginscroll/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+text = "username"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="CanvasLayer/account worker stats/worker tab/HBoxContainer/Marginscroll/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="start working" type="Button" parent="CanvasLayer/account worker stats/worker tab/HBoxContainer/Marginscroll/ScrollContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+text = "start working"
+
+[node name="working label" type="Label" parent="CanvasLayer/account worker stats/worker tab/HBoxContainer/Marginscroll/ScrollContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+text = "status working"
+
+[node name="stop working" type="Button" parent="CanvasLayer/account worker stats/worker tab/HBoxContainer/Marginscroll/ScrollContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+text = "stop working"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/account worker stats/worker tab/HBoxContainer/Marginscroll/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="salary label" type="Label" parent="CanvasLayer/account worker stats/worker tab/HBoxContainer/Marginscroll/ScrollContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "salary"
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/account worker stats/worker tab/HBoxContainer/Marginscroll/ScrollContainer/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(16, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="salary" type="Label" parent="CanvasLayer/account worker stats/worker tab/HBoxContainer/Marginscroll/ScrollContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "some salary of apples"
+
+[node name="quit job" type="Button" parent="CanvasLayer/account worker stats/worker tab/HBoxContainer/Marginscroll/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+text = "quit job"
+
+[node name="biography" type="TextEdit" parent="CanvasLayer/account worker stats/worker tab/HBoxContainer/Marginscroll/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+placeholder_text = "add biography here"
+wrap_mode = 1
+
+[node name="submit biography" type="Button" parent="CanvasLayer/account worker stats/worker tab/HBoxContainer/Marginscroll/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+text = "submit biography"
+
+[node name="X" type="MarginContainer" parent="CanvasLayer/account worker stats/worker tab/HBoxContainer"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 0
+
+[node name="X" type="Button" parent="CanvasLayer/account worker stats/worker tab/HBoxContainer/X"]
+layout_mode = 2
+text = "X"
+
+[node name="store window" type="Control" parent="CanvasLayer"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 141.0
+offset_top = 100.0
+offset_right = -205.0
+offset_bottom = -117.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_8fqb8")
+script = ExtResource("4_tnbuf")
+minimum_window_size = Vector2(315, 225)
+
+[node name="store tab" type="TabContainer" parent="CanvasLayer/store window"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+current_tab = 1
+script = ExtResource("17_g2idr")
+
+[node name="items" type="HBoxContainer" parent="CanvasLayer/store window/store tab"]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+metadata/_tab_index = 0
+
+[node name="leftSpace" type="MarginContainer" parent="CanvasLayer/store window/store tab/items"]
+custom_minimum_size = Vector2(64, 0)
+layout_mode = 2
+
+[node name="Marginscroll" type="MarginContainer" parent="CanvasLayer/store window/store tab/items"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="ScrollContainer" type="ScrollContainer" parent="CanvasLayer/store window/store tab/items/Marginscroll"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="items container" type="VBoxContainer" parent="CanvasLayer/store window/store tab/items/Marginscroll/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+
+[node name="top padding" type="MarginContainer" parent="CanvasLayer/store window/store tab/items/Marginscroll/ScrollContainer/items container"]
+custom_minimum_size = Vector2(0, 64)
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_constants/margin_left = 0
+
+[node name="item name" type="LineEdit" parent="CanvasLayer/store window/store tab/items/Marginscroll/ScrollContainer/items container"]
+layout_mode = 2
+placeholder_text = "item name"
+expand_to_text_length = true
+
+[node name="item cost" type="LineEdit" parent="CanvasLayer/store window/store tab/items/Marginscroll/ScrollContainer/items container"]
+layout_mode = 2
+placeholder_text = "item cost"
+expand_to_text_length = true
+
+[node name="add item" type="Button" parent="CanvasLayer/store window/store tab/items/Marginscroll/ScrollContainer/items container"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+text = "add item"
+
+[node name="X" type="MarginContainer" parent="CanvasLayer/store window/store tab/items"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 0
+
+[node name="X" type="Button" parent="CanvasLayer/store window/store tab/items/X"]
+layout_mode = 2
+text = "X"
+
+[node name="requested items" type="TabContainer" parent="CanvasLayer/store window/store tab"]
+layout_mode = 2
+current_tab = 1
+metadata/_tab_index = 1
+
+[node name="customers" type="ScrollContainer" parent="CanvasLayer/store window/store tab/requested items"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 0
+
+[node name="customers" type="HBoxContainer" parent="CanvasLayer/store window/store tab/requested items/customers"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="leftSpace" type="MarginContainer" parent="CanvasLayer/store window/store tab/requested items/customers/customers"]
+custom_minimum_size = Vector2(64, 0)
+layout_mode = 2
+
+[node name="Marginscroll" type="MarginContainer" parent="CanvasLayer/store window/store tab/requested items/customers/customers"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="ScrollContainer" type="ScrollContainer" parent="CanvasLayer/store window/store tab/requested items/customers/customers/Marginscroll"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Requested Customer Container" type="VBoxContainer" parent="CanvasLayer/store window/store tab/requested items/customers/customers/Marginscroll/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+
+[node name="top padding" type="MarginContainer" parent="CanvasLayer/store window/store tab/requested items/customers/customers/Marginscroll/ScrollContainer/Requested Customer Container"]
+custom_minimum_size = Vector2(0, 64)
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_constants/margin_left = 0
+
+[node name="X" type="MarginContainer" parent="CanvasLayer/store window/store tab/requested items/customers/customers"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 0
+
+[node name="X" type="Button" parent="CanvasLayer/store window/store tab/requested items/customers/customers/X"]
+layout_mode = 2
+text = "X"
+
+[node name="requested items" type="ScrollContainer" parent="CanvasLayer/store window/store tab/requested items"]
+layout_mode = 2
+metadata/_tab_index = 1
+
+[node name="customers" type="HBoxContainer" parent="CanvasLayer/store window/store tab/requested items/requested items"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="leftSpace" type="MarginContainer" parent="CanvasLayer/store window/store tab/requested items/requested items/customers"]
+custom_minimum_size = Vector2(64, 0)
+layout_mode = 2
+
+[node name="Marginscroll" type="MarginContainer" parent="CanvasLayer/store window/store tab/requested items/requested items/customers"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="ScrollContainer" type="ScrollContainer" parent="CanvasLayer/store window/store tab/requested items/requested items/customers/Marginscroll"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Requested Items Container" type="VBoxContainer" parent="CanvasLayer/store window/store tab/requested items/requested items/customers/Marginscroll/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+
+[node name="top padding" type="MarginContainer" parent="CanvasLayer/store window/store tab/requested items/requested items/customers/Marginscroll/ScrollContainer/Requested Items Container"]
+custom_minimum_size = Vector2(0, 64)
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_constants/margin_left = 0
+
+[node name="X" type="MarginContainer" parent="CanvasLayer/store window/store tab/requested items/requested items/customers"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 0
+
+[node name="X" type="Button" parent="CanvasLayer/store window/store tab/requested items/requested items/customers/X"]
+layout_mode = 2
+text = "X"
+
+[node name="commercials" type="HBoxContainer" parent="CanvasLayer/store window/store tab"]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+metadata/_tab_index = 2
+
+[node name="leftSpace" type="MarginContainer" parent="CanvasLayer/store window/store tab/commercials"]
+custom_minimum_size = Vector2(64, 0)
+layout_mode = 2
+
+[node name="Marginscroll" type="MarginContainer" parent="CanvasLayer/store window/store tab/commercials"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="ScrollContainer" type="ScrollContainer" parent="CanvasLayer/store window/store tab/commercials/Marginscroll"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="commercial container" type="VBoxContainer" parent="CanvasLayer/store window/store tab/commercials/Marginscroll/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+
+[node name="top padding" type="MarginContainer" parent="CanvasLayer/store window/store tab/commercials/Marginscroll/ScrollContainer/commercial container"]
+custom_minimum_size = Vector2(0, 64)
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_constants/margin_left = 0
+
+[node name="add comercial" type="Button" parent="CanvasLayer/store window/store tab/commercials/Marginscroll/ScrollContainer/commercial container"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+text = "add comercial"
+
+[node name="X" type="MarginContainer" parent="CanvasLayer/store window/store tab/commercials"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 0
+
+[node name="X" type="Button" parent="CanvasLayer/store window/store tab/commercials/X"]
+layout_mode = 2
+text = "X"
+
+[node name="Item window" type="Control" parent="CanvasLayer"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 141.0
+offset_top = 100.0
+offset_right = -565.0
+offset_bottom = -134.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_8fqb8")
+script = ExtResource("4_tnbuf")
+minimum_window_size = Vector2(315, 225)
+
+[node name="items tab" type="TabContainer" parent="CanvasLayer/Item window"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+current_tab = 0
+tabs_visible = false
+script = ExtResource("18_pp5oh")
+
+[node name="items" type="HBoxContainer" parent="CanvasLayer/Item window/items tab"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+metadata/_tab_index = 0
+
+[node name="leftSpace" type="MarginContainer" parent="CanvasLayer/Item window/items tab/items"]
+custom_minimum_size = Vector2(64, 0)
+layout_mode = 2
+
+[node name="Marginscroll" type="MarginContainer" parent="CanvasLayer/Item window/items tab/items"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="ScrollContainer" type="ScrollContainer" parent="CanvasLayer/Item window/items tab/items/Marginscroll"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="items container" type="VBoxContainer" parent="CanvasLayer/Item window/items tab/items/Marginscroll/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+
+[node name="top padding" type="MarginContainer" parent="CanvasLayer/Item window/items tab/items/Marginscroll/ScrollContainer/items container"]
+custom_minimum_size = Vector2(0, 64)
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_constants/margin_left = 0
+
+[node name="item name" type="LineEdit" parent="CanvasLayer/Item window/items tab/items/Marginscroll/ScrollContainer/items container"]
+layout_mode = 2
+placeholder_text = "item name"
+expand_to_text_length = true
+
+[node name="label item name" type="Label" parent="CanvasLayer/Item window/items tab/items/Marginscroll/ScrollContainer/items container"]
+layout_mode = 2
+
+[node name="item cost" type="LineEdit" parent="CanvasLayer/Item window/items tab/items/Marginscroll/ScrollContainer/items container"]
+layout_mode = 2
+placeholder_text = "item cost"
+expand_to_text_length = true
+
+[node name="label item cost" type="Label" parent="CanvasLayer/Item window/items tab/items/Marginscroll/ScrollContainer/items container"]
+layout_mode = 2
+
+[node name="item quantity" type="LineEdit" parent="CanvasLayer/Item window/items tab/items/Marginscroll/ScrollContainer/items container"]
+layout_mode = 2
+placeholder_text = "item quantity"
+expand_to_text_length = true
+
+[node name="label item quantity" type="Label" parent="CanvasLayer/Item window/items tab/items/Marginscroll/ScrollContainer/items container"]
+layout_mode = 2
+
+[node name="update item" type="Button" parent="CanvasLayer/Item window/items tab/items/Marginscroll/ScrollContainer/items container"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+text = "update item"
+
+[node name="buy" type="Button" parent="CanvasLayer/Item window/items tab/items/Marginscroll/ScrollContainer/items container"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+text = "buy item"
+
+[node name="remove item" type="Button" parent="CanvasLayer/Item window/items tab/items/Marginscroll/ScrollContainer/items container"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+text = "remove item"
+
+[node name="buy as" type="CheckBox" parent="CanvasLayer/Item window/items tab/items/Marginscroll/ScrollContainer/items container"]
+layout_mode = 2
+text = "buy as corg"
+
+[node name="info" type="Label" parent="CanvasLayer/Item window/items tab/items/Marginscroll/ScrollContainer/items container"]
+layout_mode = 2
+text = "<reserved on corgs>"
+
+[node name="new reserve on corg" type="HBoxContainer" parent="CanvasLayer/Item window/items tab/items/Marginscroll/ScrollContainer/items container"]
+layout_mode = 2
+
+[node name="new reserve on corg" type="LineEdit" parent="CanvasLayer/Item window/items tab/items/Marginscroll/ScrollContainer/items container/new reserve on corg"]
+layout_mode = 2
+placeholder_text = "set new reserve on corg"
+expand_to_text_length = true
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/Item window/items tab/items/Marginscroll/ScrollContainer/items container/new reserve on corg"]
+custom_minimum_size = Vector2(16, 0)
+layout_mode = 2
+
+[node name="reserve money" type="LineEdit" parent="CanvasLayer/Item window/items tab/items/Marginscroll/ScrollContainer/items container/new reserve on corg"]
+layout_mode = 2
+placeholder_text = "reserve money"
+expand_to_text_length = true
+
+[node name="submit reserved trader" type="Button" parent="CanvasLayer/Item window/items tab/items/Marginscroll/ScrollContainer/items container"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+text = "submit reserved"
+
+[node name="X" type="MarginContainer" parent="CanvasLayer/Item window/items tab/items"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 0
+
+[node name="X" type="Button" parent="CanvasLayer/Item window/items tab/items/X"]
+layout_mode = 2
+text = "X"
+
+[node name="law manager" type="Control" parent="CanvasLayer"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 141.0
+offset_top = 100.0
+offset_right = -449.0
+offset_bottom = -157.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_8fqb8")
+script = ExtResource("4_tnbuf")
+
+[node name="laws tab" type="TabContainer" parent="CanvasLayer/law manager"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+current_tab = 0
+tabs_visible = false
+script = ExtResource("21_p4k3o")
+
+[node name="laws" type="HBoxContainer" parent="CanvasLayer/law manager/laws tab"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+metadata/_tab_index = 0
+
+[node name="leftSpace" type="MarginContainer" parent="CanvasLayer/law manager/laws tab/laws"]
+custom_minimum_size = Vector2(64, 0)
+layout_mode = 2
+
+[node name="ScrollContainer" type="ScrollContainer" parent="CanvasLayer/law manager/laws tab/laws"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="laws container" type="VBoxContainer" parent="CanvasLayer/law manager/laws tab/laws/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="top padding" type="MarginContainer" parent="CanvasLayer/law manager/laws tab/laws/ScrollContainer/laws container"]
+custom_minimum_size = Vector2(0, 64)
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_constants/margin_left = 0
+
+[node name="submit law container" type="VBoxContainer" parent="CanvasLayer/law manager/laws tab/laws/ScrollContainer/laws container"]
+layout_mode = 2
+size_flags_vertical = 0
+
+[node name="law header" type="LineEdit" parent="CanvasLayer/law manager/laws tab/laws/ScrollContainer/laws container/submit law container"]
+layout_mode = 2
+placeholder_text = "add law header"
+expand_to_text_length = true
+
+[node name="law body" type="TextEdit" parent="CanvasLayer/law manager/laws tab/laws/ScrollContainer/laws container/submit law container"]
+custom_minimum_size = Vector2(0, 128)
+layout_mode = 2
+size_flags_vertical = 2
+placeholder_text = "add law body"
+wrap_mode = 1
+
+[node name="submit law" type="Button" parent="CanvasLayer/law manager/laws tab/laws/ScrollContainer/laws container/submit law container"]
+layout_mode = 2
+text = "suggest law"
+
+[node name="X" type="MarginContainer" parent="CanvasLayer/law manager/laws tab/laws"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 0
+
+[node name="X" type="Button" parent="CanvasLayer/law manager/laws tab/laws/X"]
+layout_mode = 2
+text = "X"
+
+[node name="DataBase" parent="CanvasLayer" instance=ExtResource("7_ldvd5")]
+visible = false
+layout_mode = 1
+theme = ExtResource("1_8fqb8")
+
+[node name="commercial manager" type="Control" parent="CanvasLayer"]
+layout_mode = 1
+anchor_right = 0.152
+anchor_bottom = 1.0
+offset_right = -0.104004
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource("1_8fqb8")
+script = ExtResource("18_duh6y")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/commercial manager"]
+layout_mode = 1
+offset_right = 104.0
+offset_bottom = 124.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/commercial manager/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 2
+size_flags_vertical = 0
+
+[node name="commercial spot" parent="CanvasLayer/commercial manager/HBoxContainer/VBoxContainer" instance=ExtResource("20_53ecb")]
+visible = false
+layout_mode = 2
+
+[node name="commercial spot2" parent="CanvasLayer/commercial manager/HBoxContainer/VBoxContainer" instance=ExtResource("20_53ecb")]
+visible = false
+layout_mode = 2
+
+[node name="commercial spot3" parent="CanvasLayer/commercial manager/HBoxContainer/VBoxContainer" instance=ExtResource("20_53ecb")]
+visible = false
+layout_mode = 2
+
+[node name="commercial spot4" parent="CanvasLayer/commercial manager/HBoxContainer/VBoxContainer" instance=ExtResource("20_53ecb")]
+visible = false
+layout_mode = 2
+
+[node name="commercial spot5" parent="CanvasLayer/commercial manager/HBoxContainer/VBoxContainer" instance=ExtResource("20_53ecb")]
+visible = false
+layout_mode = 2
+
+[node name="commercial spot6" parent="CanvasLayer/commercial manager/HBoxContainer/VBoxContainer" instance=ExtResource("20_53ecb")]
+visible = false
+layout_mode = 2
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="CanvasLayer/commercial manager/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 2
+size_flags_vertical = 0
+
+[node name="commercial spot" parent="CanvasLayer/commercial manager/HBoxContainer/VBoxContainer2" instance=ExtResource("20_53ecb")]
+visible = false
+layout_mode = 2
+
+[node name="commercial spot2" parent="CanvasLayer/commercial manager/HBoxContainer/VBoxContainer2" instance=ExtResource("20_53ecb")]
+visible = false
+layout_mode = 2
+
+[node name="commercial spot3" parent="CanvasLayer/commercial manager/HBoxContainer/VBoxContainer2" instance=ExtResource("20_53ecb")]
+visible = false
+layout_mode = 2
+
+[node name="commercial spot4" parent="CanvasLayer/commercial manager/HBoxContainer/VBoxContainer2" instance=ExtResource("20_53ecb")]
+visible = false
+layout_mode = 2
+
+[node name="commercial spot5" parent="CanvasLayer/commercial manager/HBoxContainer/VBoxContainer2" instance=ExtResource("20_53ecb")]
+visible = false
+layout_mode = 2
+
+[node name="commercial spot6" parent="CanvasLayer/commercial manager/HBoxContainer/VBoxContainer2" instance=ExtResource("20_53ecb")]
+visible = false
+layout_mode = 2
+
+[connection signal="mouse_entered" from="CanvasLayer/RegLogin" to="CanvasLayer/RegLogin" method="focus_enter"]
+[connection signal="mouse_exited" from="CanvasLayer/RegLogin" to="CanvasLayer/RegLogin" method="focus_exit"]
+[connection signal="pressed" from="CanvasLayer/RegLogin/RegLoginTabs/start client server/marginCenter/VBoxContainer/HBoxContainer/MarginContainerClient/Client show to local server" to="CanvasLayer/RegLogin/RegLoginTabs" method="client"]
+[connection signal="pressed" from="CanvasLayer/RegLogin/RegLoginTabs/start client server/marginCenter/VBoxContainer/HBoxContainer/MarginContainerServer/Server" to="CanvasLayer/RegLogin/RegLoginTabs" method="server"]
+[connection signal="toggled" from="CanvasLayer/RegLogin/RegLoginTabs/start client server/marginCenter/VBoxContainer/MarginContainer/CheckBox" to="CanvasLayer/RegLogin/RegLoginTabs" method="config"]
+[connection signal="pressed" from="CanvasLayer/RegLogin/RegLoginTabs/Login/MarginContainer/VBoxContainer/Login" to="CanvasLayer/RegLogin/RegLoginTabs" method="login"]
+[connection signal="pressed" from="CanvasLayer/RegLogin/RegLoginTabs/Register/MarginContainer/VBoxContainer/register" to="CanvasLayer/RegLogin/RegLoginTabs" method="register"]
+[connection signal="pressed" from="CanvasLayer/RegLogin/RegLoginTabs/confirmation/MarginContainer/buttonsContainer/Button" to="CanvasLayer/RegLogin/RegLoginTabs" method="confirm"]
+[connection signal="text_submitted" from="CanvasLayer/RegLogin/RegLoginTabs/confirmation/MarginContainer/buttonsContainer/LineEdit" to="CanvasLayer/RegLogin/RegLoginTabs" method="confirm_text"]
+[connection signal="meta_clicked" from="CanvasLayer/RegLogin/RegLoginTabs/Credits/VBoxContainer/instructions/ScrollContainer/MarginContainer/test container/RichTextLabel" to="CanvasLayer/RegLogin/RegLoginTabs/Credits/VBoxContainer/instructions/ScrollContainer/MarginContainer/test container" method="_on_rich_text_label_meta_clicked"]
+[connection signal="pressed" from="CanvasLayer/RegLogin/RegLoginTabs/test/VBoxContainer/instructions/ScrollContainer/MarginContainer/test container/test remove all in savables" to="CanvasLayer/RegLogin/RegLoginTabs/test/VBoxContainer/instructions/ScrollContainer/MarginContainer/test container" method="test_remove_all_in_savables"]
+[connection signal="text_submitted" from="CanvasLayer/RegLogin/RegLoginTabs/test/VBoxContainer/instructions/ScrollContainer/MarginContainer/test container/number test" to="CanvasLayer/RegLogin/RegLoginTabs/test/VBoxContainer/instructions/ScrollContainer/MarginContainer/test container" method="test_number"]
+[connection signal="pressed" from="CanvasLayer/RegLogin/RegLoginTabs/test/VBoxContainer/instructions/ScrollContainer/MarginContainer/test container/record" to="CanvasLayer/RegLogin/RegLoginTabs/test/VBoxContainer/instructions/ScrollContainer/MarginContainer/test container" method="record"]
+[connection signal="pressed" from="CanvasLayer/RegLogin/RegLoginTabs/test/VBoxContainer/instructions/ScrollContainer/MarginContainer/test container/play" to="CanvasLayer/RegLogin/RegLoginTabs/test/VBoxContainer/instructions/ScrollContainer/MarginContainer/test container" method="play_record"]
+[connection signal="pressed" from="CanvasLayer/RegLogin/RegLoginTabs/test/VBoxContainer/instructions/ScrollContainer/MarginContainer/test container/start streaming" to="CanvasLayer/RegLogin/RegLoginTabs/test/VBoxContainer/instructions/ScrollContainer/MarginContainer/test container" method="stream"]
+[connection signal="mouse_entered" from="CanvasLayer/MainMenu" to="CanvasLayer/MainMenu" method="focus_enter"]
+[connection signal="mouse_exited" from="CanvasLayer/MainMenu" to="CanvasLayer/MainMenu" method="focus_exit"]
+[connection signal="tab_clicked" from="CanvasLayer/MainMenu/MainMenuTabs" to="CanvasLayer/MainMenu/MainMenuTabs" method="on_main_menu_tab_clicked"]
+[connection signal="tab_clicked" from="CanvasLayer/MainMenu/MainMenuTabs/corg" to="CanvasLayer/MainMenu/MainMenuTabs/corg" method="on_corg_tab_clicked"]
+[connection signal="tab_clicked" from="CanvasLayer/MainMenu/MainMenuTabs/corg/stats" to="CanvasLayer/MainMenu/MainMenuTabs/corg" method="on_stats_corg_tab_clicked"]
+[connection signal="pressed" from="CanvasLayer/MainMenu/MainMenuTabs/corg/stats/person/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/set stats" to="CanvasLayer/MainMenu/MainMenuTabs/corg" method="on_set_stats"]
+[connection signal="text_submitted" from="CanvasLayer/MainMenu/MainMenuTabs/corg/stats/person/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/adds/submit person adds time" to="CanvasLayer/MainMenu/MainMenuTabs/corg" method="set_person_adds_time"]
+[connection signal="text_submitted" from="CanvasLayer/MainMenu/MainMenuTabs/corg/stats/person/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/referrer/whom" to="CanvasLayer/MainMenu/MainMenuTabs" method="cmd_set_referrer"]
+[connection signal="pressed" from="CanvasLayer/MainMenu/MainMenuTabs/corg/stats/corg/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/Button become corg" to="CanvasLayer/MainMenu/MainMenuTabs/corg" method="become_corg"]
+[connection signal="text_submitted" from="CanvasLayer/MainMenu/MainMenuTabs/corg/stats/corg/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/apply to corg" to="CanvasLayer/MainMenu/MainMenuTabs/corg" method="apply_to_corg"]
+[connection signal="text_submitted" from="CanvasLayer/MainMenu/MainMenuTabs/corg/stats/corg/MarginContainer/VBoxContainer/scroll corg stats/VBoxContainer/adds/submit adds time" to="CanvasLayer/MainMenu/MainMenuTabs/corg" method="set_adds_time"]
+[connection signal="text_submitted" from="CanvasLayer/MainMenu/MainMenuTabs/corg/stats/corg/MarginContainer/VBoxContainer/scroll corg stats/VBoxContainer/adds pay/submit adds pay" to="CanvasLayer/MainMenu/MainMenuTabs/corg" method="set_adds_pay"]
+[connection signal="pressed" from="CanvasLayer/MainMenu/MainMenuTabs/corg/marketplace/VBoxContainer/ScrollContainer/VBoxContainer/HBoxContainer/my store" to="CanvasLayer/MainMenu/MainMenuTabs/corg/marketplace" method="open_my_store"]
+[connection signal="pressed" from="CanvasLayer/MainMenu/MainMenuTabs/corg/workplace/TabContainer/person workplace/HBoxContainer/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/set stats" to="CanvasLayer/MainMenu/MainMenuTabs/corg" method="on_set_stats"]
+[connection signal="tab_clicked" from="CanvasLayer/MainMenu/MainMenuTabs/corg/spenders" to="CanvasLayer/MainMenu/MainMenuTabs/corg/spenders" method="on_tab_pressed"]
+[connection signal="pressed" from="CanvasLayer/MainMenu/MainMenuTabs/corg/spenders/applied/VBoxContainer/ScrollContainer/applied container/apply for spender" to="CanvasLayer/MainMenu/MainMenuTabs/corg/spenders" method="apply_for_spender"]
+[connection signal="pressed" from="CanvasLayer/MainMenu/MainMenuTabs/options/security/HBoxContainer/MarginContainer/security/container/VBoxContainer/Button" to="CanvasLayer/MainMenu/MainMenuTabs/options" method="on_submit_security"]
+[connection signal="pressed" from="CanvasLayer/MainMenu/MainMenuTabs/options/security/HBoxContainer/MarginContainer/security/container/VBoxContainer/mac pending" to="CanvasLayer/MainMenu/MainMenuTabs/options" method="on_ban_or_approve_mac"]
+[connection signal="toggled" from="CanvasLayer/MainMenu/MainMenuTabs/options/audio/HBoxContainer/MarginContainer/audio container/speach CheckBox" to="CanvasLayer/MainMenu/MainMenuTabs/options" method="_toggle_speach_dialogs"]
+[connection signal="pressed" from="CanvasLayer/MainMenu/MainMenuTabs/quit/marginCenter/VBoxContainer/HBoxContainer/MarginContainerLogOut/logout" to="CanvasLayer/MainMenu/MainMenuTabs" method="on_logout"]
+[connection signal="pressed" from="CanvasLayer/MainMenu/MainMenuTabs/quit/marginCenter/VBoxContainer/HBoxContainer/MarginContainerQuit/quit" to="CanvasLayer/MainMenu/MainMenuTabs" method="on_quit"]
+[connection signal="pressed" from="CanvasLayer/MainMenu/MainMenuTabs/Admin/players/id players container/disconnect all" to="CanvasLayer/MainMenu/MainMenuTabs/Admin" method="_on_disconnect_all_pressed"]
+[connection signal="mouse_entered" from="CanvasLayer/WelcomeUnwelcome" to="CanvasLayer/WelcomeUnwelcome" method="focus_enter"]
+[connection signal="mouse_exited" from="CanvasLayer/WelcomeUnwelcome" to="CanvasLayer/WelcomeUnwelcome" method="focus_exit"]
+[connection signal="pressed" from="CanvasLayer/WelcomeUnwelcome/WelcomeUnwelcomeTabs/banned/X/X" to="CanvasLayer/WelcomeUnwelcome/WelcomeUnwelcomeTabs" method="close_window"]
+[connection signal="pressed" from="CanvasLayer/WelcomeUnwelcome/WelcomeUnwelcomeTabs/pending/X/X" to="CanvasLayer/WelcomeUnwelcome/WelcomeUnwelcomeTabs" method="close_window"]
+[connection signal="pressed" from="CanvasLayer/WelcomeUnwelcome/WelcomeUnwelcomeTabs/approved/X/X" to="CanvasLayer/WelcomeUnwelcome/WelcomeUnwelcomeTabs" method="close_window"]
+[connection signal="mouse_entered" from="CanvasLayer/corg apply to be approved" to="CanvasLayer/corg apply to be approved" method="focus_enter"]
+[connection signal="mouse_exited" from="CanvasLayer/corg apply to be approved" to="CanvasLayer/corg apply to be approved" method="focus_exit"]
+[connection signal="pressed" from="CanvasLayer/corg apply to be approved/corg apply to be approved tabs/face/Marginscroll/ScrollContainer/bannedContainer/MarginContainer/Button" to="CanvasLayer/corg apply to be approved/corg apply to be approved tabs" method="get_face_picture"]
+[connection signal="pressed" from="CanvasLayer/corg apply to be approved/corg apply to be approved tabs/face/X/X" to="CanvasLayer/corg apply to be approved/corg apply to be approved tabs" method="close_window"]
+[connection signal="pressed" from="CanvasLayer/corg apply to be approved/corg apply to be approved tabs/id face/Marginscroll/ScrollContainer/bannedContainer/MarginContainer/Button" to="CanvasLayer/corg apply to be approved/corg apply to be approved tabs" method="get_id_face_picture"]
+[connection signal="pressed" from="CanvasLayer/corg apply to be approved/corg apply to be approved tabs/id face/X/X" to="CanvasLayer/corg apply to be approved/corg apply to be approved tabs" method="close_window"]
+[connection signal="pressed" from="CanvasLayer/corg apply to be approved/corg apply to be approved tabs/submit pictures/MarginContainer/approvedContainer/Button" to="CanvasLayer/corg apply to be approved/corg apply to be approved tabs" method="on_submit_pictures_and_id_Number"]
+[connection signal="pressed" from="CanvasLayer/corg apply to be approved/corg apply to be approved tabs/submit pictures/X/X" to="CanvasLayer/corg apply to be approved/corg apply to be approved tabs" method="close_window"]
+[connection signal="mouse_entered" from="CanvasLayer/worker window" to="CanvasLayer/worker window" method="focus_enter"]
+[connection signal="mouse_exited" from="CanvasLayer/worker window" to="CanvasLayer/worker window" method="focus_exit"]
+[connection signal="pressed" from="CanvasLayer/worker window/worker tab/HBoxContainer/Marginscroll/ScrollContainer/workerContainer/fire hire" to="CanvasLayer/worker window/worker tab" method="_on_fire_hire_pressed"]
+[connection signal="text_submitted" from="CanvasLayer/worker window/worker tab/HBoxContainer/Marginscroll/ScrollContainer/workerContainer/HBoxContainer/salary" to="CanvasLayer/worker window/worker tab" method="set_salary"]
+[connection signal="pressed" from="CanvasLayer/worker window/worker tab/HBoxContainer/X/X" to="CanvasLayer/worker window/worker tab" method="close_window"]
+[connection signal="mouse_entered" from="CanvasLayer/account worker stats" to="CanvasLayer/account worker stats" method="focus_enter"]
+[connection signal="mouse_exited" from="CanvasLayer/account worker stats" to="CanvasLayer/account worker stats" method="focus_exit"]
+[connection signal="pressed" from="CanvasLayer/account worker stats/worker tab/HBoxContainer/Marginscroll/ScrollContainer/VBoxContainer/HBoxContainer2/start working" to="CanvasLayer/account worker stats/worker tab" method="on_start_working"]
+[connection signal="pressed" from="CanvasLayer/account worker stats/worker tab/HBoxContainer/Marginscroll/ScrollContainer/VBoxContainer/HBoxContainer2/stop working" to="CanvasLayer/account worker stats/worker tab" method="on_stop_working"]
+[connection signal="pressed" from="CanvasLayer/account worker stats/worker tab/HBoxContainer/Marginscroll/ScrollContainer/VBoxContainer/quit job" to="CanvasLayer/account worker stats/worker tab" method="on_quit_job_pressed"]
+[connection signal="pressed" from="CanvasLayer/account worker stats/worker tab/HBoxContainer/Marginscroll/ScrollContainer/VBoxContainer/submit biography" to="CanvasLayer/account worker stats/worker tab" method="on_biography_text_set"]
+[connection signal="pressed" from="CanvasLayer/account worker stats/worker tab/HBoxContainer/X/X" to="CanvasLayer/account worker stats/worker tab" method="close_window"]
+[connection signal="mouse_entered" from="CanvasLayer/store window" to="CanvasLayer/store window" method="focus_enter"]
+[connection signal="mouse_exited" from="CanvasLayer/store window" to="CanvasLayer/store window" method="focus_exit"]
+[connection signal="tab_clicked" from="CanvasLayer/store window/store tab" to="CanvasLayer/store window/store tab" method="on_tab_clicked"]
+[connection signal="pressed" from="CanvasLayer/store window/store tab/items/Marginscroll/ScrollContainer/items container/add item" to="CanvasLayer/store window/store tab" method="on_add_item"]
+[connection signal="pressed" from="CanvasLayer/store window/store tab/items/X/X" to="CanvasLayer/store window/store tab" method="close_window"]
+[connection signal="pressed" from="CanvasLayer/store window/store tab/requested items/customers/customers/X/X" to="CanvasLayer/store window/store tab" method="close_window"]
+[connection signal="pressed" from="CanvasLayer/store window/store tab/requested items/requested items/customers/X/X" to="CanvasLayer/store window/store tab" method="close_window"]
+[connection signal="pressed" from="CanvasLayer/store window/store tab/commercials/Marginscroll/ScrollContainer/commercial container/add comercial" to="CanvasLayer/store window/store tab" method="add_comercial_picture"]
+[connection signal="pressed" from="CanvasLayer/store window/store tab/commercials/X/X" to="CanvasLayer/store window/store tab" method="close_window"]
+[connection signal="mouse_entered" from="CanvasLayer/Item window" to="CanvasLayer/Item window" method="focus_enter"]
+[connection signal="mouse_exited" from="CanvasLayer/Item window" to="CanvasLayer/Item window" method="focus_exit"]
+[connection signal="tab_clicked" from="CanvasLayer/Item window/items tab" to="CanvasLayer/Item window/items tab" method="on_tab_clicked"]
+[connection signal="pressed" from="CanvasLayer/Item window/items tab/items/Marginscroll/ScrollContainer/items container/update item" to="CanvasLayer/Item window/items tab" method="on_item_click_update"]
+[connection signal="pressed" from="CanvasLayer/Item window/items tab/items/Marginscroll/ScrollContainer/items container/buy" to="CanvasLayer/Item window/items tab" method="on_item_click_buy"]
+[connection signal="pressed" from="CanvasLayer/Item window/items tab/items/Marginscroll/ScrollContainer/items container/remove item" to="CanvasLayer/Item window/items tab" method="cmd_remove_item"]
+[connection signal="pressed" from="CanvasLayer/Item window/items tab/items/Marginscroll/ScrollContainer/items container/submit reserved trader" to="CanvasLayer/Item window/items tab" method="submit_reserve_trader"]
+[connection signal="pressed" from="CanvasLayer/Item window/items tab/items/X/X" to="CanvasLayer/Item window/items tab" method="close_window"]
+[connection signal="mouse_entered" from="CanvasLayer/law manager" to="CanvasLayer/law manager" method="focus_enter"]
+[connection signal="mouse_exited" from="CanvasLayer/law manager" to="CanvasLayer/law manager" method="focus_exit"]
+[connection signal="pressed" from="CanvasLayer/law manager/laws tab/laws/ScrollContainer/laws container/submit law container/submit law" to="CanvasLayer/law manager/laws tab" method="on_suggest_law"]
+[connection signal="pressed" from="CanvasLayer/law manager/laws tab/laws/X/X" to="CanvasLayer/law manager/laws tab" method="close_window"]
+[connection signal="mouse_entered" from="CanvasLayer/DataBase" to="CanvasLayer/DataBase" method="focus_enter"]
+[connection signal="mouse_exited" from="CanvasLayer/DataBase" to="CanvasLayer/DataBase" method="focus_exit"]

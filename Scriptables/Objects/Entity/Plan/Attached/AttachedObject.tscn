@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://dpkal0qoqlc22"]
+
+[ext_resource type="Script" path="res://Scriptables/Objects/Entity/Plan/Attached/AttachedObject.gd" id="1_pe113"]
+
+[node name="AttachedObject" type="Node"]
+script = ExtResource("1_pe113")

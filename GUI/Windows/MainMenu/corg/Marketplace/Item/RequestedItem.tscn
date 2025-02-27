@@ -1,0 +1,28 @@
+[gd_scene load_steps=2 format=3 uid="uid://sgqaa3juvaii"]
+
+[ext_resource type="Script" path="res://GUI/Windows/MainMenu/corg/Marketplace/Item/RequestedItem.gd" id="1_pbt88"]
+
+[node name="RequestedItem" type="HBoxContainer"]
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_pbt88")
+
+[node name="item name" type="Label" parent="."]
+layout_mode = 2
+text = "item name"
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+custom_minimum_size = Vector2(16, 0)
+layout_mode = 2
+
+[node name="quantity" type="Label" parent="."]
+layout_mode = 2
+text = "# asd"
+
+[node name="MarginContainer2" type="MarginContainer" parent="."]
+custom_minimum_size = Vector2(16, 0)
+layout_mode = 2
+
+[node name="shipment" type="Button" parent="."]
+layout_mode = 2
+text = "shipment"

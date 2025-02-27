@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://cv2udvb66hsni"]
+
+[ext_resource type="Script" uid="uid://dog7svjxq12yu" path="res://my assets/database/GUI/Windows/Database/GUIColumn.gd" id="1_ujxqk"]
+[ext_resource type="PackedScene" uid="uid://debpv21rf6ax3" path="res://my assets/database/GUI/Windows/Database/cell.tscn" id="2_trnir"]
+
+[node name="line container" type="VBoxContainer" node_paths=PackedStringArray("attribute_label")]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ujxqk")
+cell = ExtResource("2_trnir")
+attribute_label = NodePath("attribute label")
+
+[node name="attribute label" type="Label" parent="."]
+layout_mode = 2
+text = "ID"

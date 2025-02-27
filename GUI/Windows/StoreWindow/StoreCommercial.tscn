@@ -1,0 +1,27 @@
+[gd_scene load_steps=2 format=3 uid="uid://d37e0afal8ihi"]
+
+[ext_resource type="Script" path="res://GUI/Windows/StoreWindow/StoreCommercial.gd" id="1_4mto7"]
+
+[node name="store commercial" type="MarginContainer"]
+script = ExtResource("1_4mto7")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer"]
+custom_minimum_size = Vector2(105, 105)
+layout_mode = 2
+expand_mode = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer"]
+layout_mode = 2
+
+[node name="delete" type="Button" parent="HBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "delete
+"
+
+[node name="debug" type="Label" parent="HBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[connection signal="pressed" from="HBoxContainer/VBoxContainer/delete" to="." method="on_delete_pressed"]

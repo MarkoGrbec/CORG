@@ -1,0 +1,46 @@
+[gd_scene load_steps=8 format=3 uid="uid://r508xjyw0lgg"]
+
+[ext_resource type="Script" uid="uid://tetdh88pwmw5" path="res://Scenes/Scripts/RootMap.gd" id="1_08op1"]
+[ext_resource type="Script" uid="uid://dieengrnvayim" path="res://UniversalInputBus/UniversalInputBus.gd" id="4_l52vf"]
+[ext_resource type="Script" uid="uid://jqhkds51ian5" path="res://tools/Audio/RecordVoice.gd" id="5_8i1rv"]
+[ext_resource type="PackedScene" uid="uid://c4qttaem30mmq" path="res://GUI/Windows/aMainGUI/MainGUI.tscn" id="7_q6sd0"]
+
+[sub_resource type="AudioStreamMicrophone" id="AudioStreamMicrophone_p8xtn"]
+
+[sub_resource type="AudioStream" id="AudioStream_jd6dh"]
+
+[sub_resource type="AudioStream" id="AudioStream_plnba"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("1_08op1")
+
+[node name="CanvasLayer" parent="." instance=ExtResource("7_q6sd0")]
+
+[node name="universal_input_bus" type="Node" parent="."]
+script = ExtResource("4_l52vf")
+
+[node name="AudioStreamRecord" type="AudioStreamPlayer" parent="universal_input_bus"]
+stream = SubResource("AudioStreamMicrophone_p8xtn")
+volume_db = -0.565
+bus = &"Record"
+script = ExtResource("5_8i1rv")
+
+[node name="AudioStreamMuteRecord" type="AudioStreamPlayer" parent="universal_input_bus"]
+stream = SubResource("AudioStream_jd6dh")
+volume_db = -0.75
+bus = &"MuteRecord"
+
+[node name="AudioStreamMaster" type="AudioStreamPlayer" parent="universal_input_bus"]
+stream = SubResource("AudioStream_plnba")
+volume_db = -0.86
+
+[node name="rec buffer timer" type="Timer" parent="universal_input_bus"]
+wait_time = 0.25

@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://cb70npqya0tek"]
+
+[ext_resource type="Script" path="res://GUI/Windows/MainMenu/corg/Workers/WorkerButton.gd" id="1_ll554"]
+
+[node name="WorkerButton" type="Button"]
+script = ExtResource("1_ll554")

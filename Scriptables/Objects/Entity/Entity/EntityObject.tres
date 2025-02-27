@@ -1,0 +1,45 @@
+[gd_resource type="Resource" script_class="EntityObject" load_steps=2 format=3 uid="uid://biw2a78fhwiln"]
+
+[ext_resource type="Script" path="res://Scriptables/Objects/Entity/Entity/EntityObject.gd" id="1_8pqkf"]
+
+[resource]
+script = ExtResource("1_8pqkf")
+entityNum = 0
+entityString = ""
+newBulletType = 0
+FallenTreeType = 0
+compatibility = []
+dictTransformToolsResults = {}
+improvableTools = []
+constructMaterials = []
+typeMaterial = []
+typeMetal = []
+fullyConstructed = false
+houseFrame = 0
+isImprovable = false
+isCombinable = false
+isDividable = false
+inWorldSpace = false
+vehicle = false
+house = false
+ql = 0.0
+weightGet = 1.0
+weight = 0.0
+volumeGet = 1.0
+volume = 1.0
+cost = 0
+hard = 0.0
+timeToFinishMin = 0.0
+timeToFinishMax = 0.0
+timeToCreateMin = 0.0
+timeToCreateMax = 0.0
+timeToImprove = 0.0
+isContainer = false
+experienceCreate = 0
+experienceCreateParent = 0
+experienceMove = 0
+experienceUse = 0
+entityType = 0
+scrapType = 0
+description = ""
+_pool = []

@@ -1,0 +1,21 @@
+[gd_scene load_steps=2 format=3 uid="uid://cw3dwj3hge0vn"]
+
+[ext_resource type="Script" uid="uid://ccbmggiy3pilw" path="res://GUI/Windows/MainMenu/Options/AudioBusVolume.gd" id="1_6bb6o"]
+
+[node name="VolumeContainer" type="HBoxContainer" node_paths=PackedStringArray("h_scroll_bar", "volume_name_node")]
+script = ExtResource("1_6bb6o")
+h_scroll_bar = NodePath("HScrollBar")
+volume_name_node = NodePath("volume name")
+
+[node name="volume name" type="Label" parent="."]
+layout_mode = 2
+text = "N/A"
+
+[node name="HScrollBar" type="HScrollBar" parent="."]
+custom_minimum_size = Vector2(150, 30)
+layout_mode = 2
+min_value = -80.0
+max_value = 21.0
+page = 15.0
+
+[connection signal="value_changed" from="HScrollBar" to="." method="_volume_changed"]

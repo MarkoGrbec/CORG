@@ -1,0 +1,55 @@
+[gd_scene load_steps=2 format=3 uid="uid://b2v5bokjicwn6"]
+
+[ext_resource type="Script" path="res://GUI/Windows/MainMenu/social/forum/forum/Forum.gd" id="1_brl6h"]
+
+[node name="forum" type="MarginContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_brl6h")
+
+[node name="forum" type="TabContainer" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="create forum _ post" type="VBoxContainer" parent="forum"]
+layout_mode = 2
+
+[node name="add forum" type="LineEdit" parent="forum/create forum _ post"]
+layout_mode = 2
+placeholder_text = "add forum"
+
+[node name="add post header" type="LineEdit" parent="forum/create forum _ post"]
+layout_mode = 2
+placeholder_text = "add post header"
+
+[node name="MarginContainer" type="MarginContainer" parent="forum/create forum _ post"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="post body" type="TextEdit" parent="forum/create forum _ post/MarginContainer"]
+layout_mode = 2
+placeholder_text = "add post body"
+
+[node name="post submit" type="Button" parent="forum/create forum _ post"]
+layout_mode = 2
+text = "
+submit post
+
+"
+
+[node name="forum posts" type="MarginContainer" parent="forum"]
+visible = false
+layout_mode = 2
+
+[node name="forum posts" type="ScrollContainer" parent="forum/forum posts"]
+layout_mode = 2
+
+[node name="posts container" type="VBoxContainer" parent="forum/forum posts/forum posts"]
+layout_mode = 2
+
+[connection signal="text_submitted" from="forum/create forum _ post/add forum" to="." method="on_add_forum_submit"]
+[connection signal="pressed" from="forum/create forum _ post/post submit" to="." method="on_post_submit"]

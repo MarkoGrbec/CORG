@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://c1533dtfjkof4"]
+
+[ext_resource type="Script" path="res://GUI/Windows/MainMenu/corg/Marketplace/TraderButton.gd" id="1_qgo0b"]
+
+[node name="Trader" type="Button"]
+size_flags_horizontal = 0
+size_flags_vertical = 0
+script = ExtResource("1_qgo0b")

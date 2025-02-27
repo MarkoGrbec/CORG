@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://b6tsrbf3rlw4t"]
+
+[ext_resource type="Script" uid="uid://bfh6olbwagdv7" path="res://Networking/CorgNode/NetCorg.gd" id="1_iqugg"]
+
+[node name="CorgNode" type="Node"]
+script = ExtResource("1_iqugg")

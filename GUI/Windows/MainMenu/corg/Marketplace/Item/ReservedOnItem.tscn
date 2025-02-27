@@ -1,0 +1,28 @@
+[gd_scene load_steps=2 format=3 uid="uid://q80tv3ny2hhv"]
+
+[ext_resource type="Script" path="res://GUI/Windows/MainMenu/corg/Marketplace/Item/ReservedOnItem.gd" id="1_hkjij"]
+
+[node name="ReservedOnItem" type="HBoxContainer"]
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_hkjij")
+
+[node name="remove reserved" type="Button" parent="."]
+layout_mode = 2
+text = "remove reserved: "
+
+[node name="corg name" type="Label" parent="."]
+layout_mode = 2
+text = "corg founder"
+
+[node name="money" type="Label" parent="."]
+layout_mode = 2
+text = "money"
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+custom_minimum_size = Vector2(16, 0)
+layout_mode = 2
+
+[node name="total reserved money" type="Label" parent="."]
+layout_mode = 2
+text = "reserved money"

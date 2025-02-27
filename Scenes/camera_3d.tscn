@@ -1,0 +1,34 @@
+[gd_scene load_steps=11 format=3 uid="uid://k2fqtu2fcifs"]
+
+[ext_resource type="Script" uid="uid://cij6t0lu161m5" path="res://Scenes/Scripts/Camera3D.gd" id="1_b5qxq"]
+[ext_resource type="Script" uid="uid://307y0xrax4wt" path="res://tools/Audio/MusicManager.gd" id="2_jr47w"]
+[ext_resource type="AudioStream" uid="uid://vj5tdhitonav" path="res://DragonsPentagram/Sounds/Music/mainMenu Spirits of greenWood.mp3" id="2_ugtmb"]
+[ext_resource type="AudioStream" uid="uid://c1bg7dvy1ywy3" path="res://DragonsPentagram/Sounds/lvl_up_1.mp3" id="4_1w61i"]
+[ext_resource type="AudioStream" uid="uid://rv0f26v0ngqg" path="res://DragonsPentagram/Sounds/lvl_up_2.mp3" id="5_gia6k"]
+[ext_resource type="AudioStream" uid="uid://d0spy8aa113pw" path="res://DragonsPentagram/Sounds/Music/29-Audio_1_2022-06-21_164436_online-audio-converter.com.mp3" id="6_wsf2g"]
+[ext_resource type="AudioStream" uid="uid://bpyk7j8fw6qio" path="res://DragonsPentagram/Sounds/Music/shop_music_1.mp3" id="7_dicyj"]
+[ext_resource type="AudioStream" uid="uid://c5kd5c1246d41" path="res://DragonsPentagram/Sounds/Music/shop_music_2.mp3" id="8_33j8u"]
+[ext_resource type="AudioStream" uid="uid://bh1y0x2t07ks2" path="res://DragonsPentagram/Sounds/Music/shop_music_3.mp3" id="9_d3xy2"]
+[ext_resource type="AudioStream" uid="uid://gbei6wwd4qun" path="res://DragonsPentagram/Sounds/Music/wandering_music.mp3" id="10_wuoat"]
+
+[node name="Node3D" type="Node3D" node_paths=PackedStringArray("camera")]
+script = ExtResource("1_b5qxq")
+camera = NodePath("Camera3D")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.125)
+
+[node name="music manager" type="AudioStreamPlayer" parent="Camera3D" node_paths=PackedStringArray("level_up_player")]
+max_polyphony = 10
+bus = &"music"
+script = ExtResource("2_jr47w")
+level_up_player = NodePath("../level up player")
+level_up = ExtResource("5_gia6k")
+mile_stone = ExtResource("4_1w61i")
+main_menu_music = Array[AudioStream]([ExtResource("2_ugtmb"), ExtResource("6_wsf2g")])
+shop_music = Array[AudioStream]([ExtResource("7_dicyj"), ExtResource("8_33j8u"), ExtResource("9_d3xy2")])
+wandering_music = Array[AudioStream]([ExtResource("10_wuoat")])
+
+[node name="level up player" type="AudioStreamPlayer" parent="Camera3D"]
+max_polyphony = 2
+bus = &"level up"

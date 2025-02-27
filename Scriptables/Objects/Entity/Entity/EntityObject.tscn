@@ -1,0 +1,141 @@
+[gd_scene load_steps=2 format=3 uid="uid://dpxyw4fi7ghos"]
+
+[sub_resource type="GDScript" id="GDScript_xr4ei"]
+script/source = "extends Resource
+
+#region general inputs
+@export var entityNum: int
+@export var entityString: String
+@export var scene: PackedScene
+#endregion general inputs
+#region entity inputs
+@export var newBulletType: int
+@export var FallenTreeType: int
+## only entities can get in this inventory
+
+## if 0 all entities can get in to this inventoy
+@export var compatibility = []
+## key tool, 
+## value result;
+## add tool with which this workpiece will be modified and end gain end results
+@export var dictTransformToolsResults = {}
+
+
+@export var improvableTools = []
+@export var constructMaterials = []
+@export var typeMaterial = []
+@export var typeMetal = []
+@export var fullyConstructed: bool
+@export var houseFrame: int
+@export var isImprovable: bool
+@export var isCombinable: bool
+@export var isDividable: bool
+
+
+## when it's transformed from another entity it could go in to world space OR if false inventory
+@export var inWorldSpace: bool
+@export var vehicle: bool
+@export var house: bool
+#@export var hasWeaponSystem: bool
+@export var ql: float
+@export var weightGet = 1.0
+## kg
+@export var weight: float
+@export var volumeGet = 1.0
+## dm^3
+@export var volume: = 1.0
+@export var cost: int
+@export var hard: float
+## summary>moving time
+@export var timeToFinishMin: float
+## summary>moving time
+@export var timeToFinishMax: float
+@export var timeToCreateMin: float
+@export var timeToCreateMax: float
+@export var timeToImprove: float
+@export var invenotrySound: AudioStreamMP3
+@export var isContainer: bool
+@export var experienceCreate: int
+@export var experienceCreateParent: int
+@export var experienceMove: int
+@export var experienceUse: int
+@export var entityType: int
+@export var scrapType: int
+@export var description: String
+@export var _pool = []
+#endregion entity
+
+enum EntityType{
+	nul,
+	tree,
+	tree_stump,
+	tree_cut,
+}
+	
+	
+	
+## which objects can go in to this inventory
+func IsCompatible(child: int):
+	if compatibility.size() == 0:
+		return true;
+	for item in compatibility:
+		if item == child:
+			return true;
+	return false;
+	
+## only for bullets with no type in to which weapon it can go
+func NewBulletType(bullet):
+	if bullet == Enums.Esprite.bullet:
+		if newBulletType != Enums.Esprite.undefined:
+			return newBulletType
+	return bullet
+	
+## add to pool
+func Push(node: Node3D):
+	_pool.push_back(node)
+	#node.hide()
+	print(\"visibility\", node.visible)
+	
+## Rremove from pool
+func Pop():
+	if scene == null:
+		printerr(String(\"index: [{i}] selected Entity: [{e}] does not have a scene\\n{stack}\").format({i = entityNum, e = entityString, stack = get_stack()}))
+	elif _pool.size() == 0:
+		var instance = scene.instantiate()
+		g_man.add_child(instance)
+		instance.entityNum = entityNum
+		#get script and set it's bace to the index so that we have numbered them
+		return instance
+	else:
+		var instance = _pool.pop_back()
+		instance.entityString = entityString
+		instance.show()
+		return instance
+	
+## if this object can be processed with provided tool
+func GetWorkpieces(tool):
+	if dictTransformToolsResults.has(tool):
+		return dictTransformToolsResults[tool].results
+	return []
+
+## if this object creates next result
+func CanCreateResult(result):
+	if dictTransformToolsResults.values().any(result):
+		return true
+	return false
+	
+## if this workpiece can be processed with certain tool
+func IsMadeWithTool(tool):
+	return dictTransformToolsResults.has(tool)
+	
+## free pool to the desired amount
+func Empty(left):
+	if left < 0:
+		left = 0
+	while left < _pool.size():
+		var temp = _pool.pop_back()
+		temp.queue_free()
+"
+
+[node name="ResourceScene" type="Node"]
+script = SubResource("GDScript_xr4ei")

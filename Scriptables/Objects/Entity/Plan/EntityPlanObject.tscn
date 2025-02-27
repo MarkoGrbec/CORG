@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://gxpkljtdtexh"]
+
+[ext_resource type="Script" path="res://Scriptables/Objects/Entity/Plan/EntityPlanObject.gd" id="1_vm25g"]
+
+[node name="EntityPlanObject" type="Node"]
+script = ExtResource("1_vm25g")

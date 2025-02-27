@@ -1,0 +1,54 @@
+[gd_scene load_steps=2 format=3 uid="uid://cr5ocohlo0nv5"]
+
+[ext_resource type="Script" path="res://GUI/Windows/MainMenu/social/forum/post/Post.gd" id="1_wgiie"]
+
+[node name="post" type="MarginContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_wgiie")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="left margin" type="MarginContainer" parent="HBoxContainer"]
+custom_minimum_size = Vector2(32, 0)
+layout_mode = 2
+
+[node name="post margin" type="MarginContainer" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="post container" type="VBoxContainer" parent="HBoxContainer/post margin"]
+layout_mode = 2
+
+[node name="post header" type="Label" parent="HBoxContainer/post margin/post container"]
+layout_mode = 2
+text = "post header"
+
+[node name="post text" type="Label" parent="HBoxContainer/post margin/post container"]
+layout_mode = 2
+text = "post text"
+
+[node name="post footer" type="Label" parent="HBoxContainer/post margin/post container"]
+layout_mode = 2
+text = "post footer"
+
+[node name="comment text" type="LineEdit" parent="HBoxContainer/post margin/post container"]
+layout_mode = 2
+placeholder_text = "comment text"
+
+[node name="add comment" type="Button" parent="HBoxContainer/post margin/post container"]
+layout_mode = 2
+text = "add comment"
+
+[node name="comment margin" type="MarginContainer" parent="HBoxContainer/post margin/post container"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="comment container" type="VBoxContainer" parent="HBoxContainer/post margin/post container/comment margin"]
+layout_mode = 2
+
+[connection signal="pressed" from="HBoxContainer/post margin/post container/add comment" to="." method="on_comment_submit"]

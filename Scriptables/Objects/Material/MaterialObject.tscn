@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://8vwsw1dm72ik"]
+
+[ext_resource type="Script" path="res://Scriptables/Objects/Material/MaterialObject.gd" id="1_06yfe"]
+
+[node name="MaterialObject" type="Node"]
+script = ExtResource("1_06yfe")

@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://vgf47hlrih3c"]
+
+[ext_resource type="Script" path="res://GUI/Windows/MainMenu/corg/Marketplace/Item/RequestedCustomer.gd" id="1_3bq03"]
+
+[node name="customer" type="Button"]
+size_flags_horizontal = 0
+size_flags_vertical = 0
+text = "customer x"
+script = ExtResource("1_3bq03")

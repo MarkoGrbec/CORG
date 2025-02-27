@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://fvc4mkedes2e"]
+
+[ext_resource type="Script" path="res://Scriptables/Objects/Experience/ExperienceObject.gd" id="1_7k0uk"]
+
+[node name="ExperienceObject" type="Node"]
+script = ExtResource("1_7k0uk")

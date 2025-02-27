@@ -1,0 +1,30 @@
+[gd_scene load_steps=2 format=3 uid="uid://djg3i8xnjybvo"]
+
+[ext_resource type="Script" path="res://GUI/Windows/MainMenu/corg/Marketplace/Item/Item.gd" id="1_26qqx"]
+
+[node name="item" type="VBoxContainer"]
+script = ExtResource("1_26qqx")
+
+[node name="item name" type="LineEdit" parent="."]
+layout_mode = 2
+placeholder_text = "item name"
+expand_to_text_length = true
+
+[node name="item cost" type="LineEdit" parent="."]
+layout_mode = 2
+placeholder_text = "item cost"
+expand_to_text_length = true
+
+[node name="update item" type="Button" parent="."]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+text = "update item"
+
+[node name="remove item" type="Button" parent="."]
+layout_mode = 2
+text = "remove item"
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 2
+text = "_ _ _ _ _"

@@ -1,0 +1,38 @@
+[gd_scene load_steps=2 format=3 uid="uid://b7f0nwmlpgbmv"]
+
+[ext_resource type="Script" path="res://GUI/Windows/MainMenu/corg/Confirm/PendingForCorg.gd" id="1_qkms7"]
+
+[node name="pending for corg" type="HBoxContainer"]
+size_flags_vertical = 0
+script = ExtResource("1_qkms7")
+
+[node name="face picture" type="TextureRect" parent="."]
+layout_mode = 2
+expand_mode = 2
+stretch_mode = 4
+
+[node name="id picture" type="TextureRect" parent="."]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 6
+
+[node name="edit id number" type="LineEdit" parent="VBoxContainer/MarginContainer"]
+layout_mode = 2
+placeholder_text = "enter id number"
+expand_to_text_length = true
+
+[node name="MarginContainer2" type="MarginContainer" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 2
+
+[node name="Button" type="Button" parent="VBoxContainer/MarginContainer2"]
+layout_mode = 2
+text = "I approve it"

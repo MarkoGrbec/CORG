@@ -1,0 +1,53 @@
+[gd_scene load_steps=2 format=3 uid="uid://c6m7tihrexpy0"]
+
+[ext_resource type="Script" path="res://GUI/Windows/MainMenu/Spender/Spender.gd" id="1_txwk5"]
+
+[node name="Spender" type="VBoxContainer"]
+custom_minimum_size = Vector2(128, 0)
+size_flags_horizontal = 0
+script = ExtResource("1_txwk5")
+
+[node name="spender username" type="Button" parent="."]
+layout_mode = 2
+toggle_mode = true
+text = "username"
+
+[node name="spending for" type="Label" parent="."]
+visible = false
+layout_mode = 2
+text = "spender text"
+
+[node name="vote" type="CheckBox" parent="."]
+visible = false
+layout_mode = 2
+text = "vote"
+
+[node name="voted container" type="HBoxContainer" parent="."]
+visible = false
+layout_mode = 2
+
+[node name="Label" type="Label" parent="voted container"]
+layout_mode = 2
+text = "voted"
+
+[node name="voted progress bar" type="ProgressBar" parent="voted container"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="total voted container" type="HBoxContainer" parent="."]
+visible = false
+layout_mode = 2
+
+[node name="Label" type="Label" parent="total voted container"]
+layout_mode = 2
+text = "total voted"
+
+[node name="total voted progress bar" type="ProgressBar" parent="total voted container"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="end" type="Label" parent="."]
+layout_mode = 2
+text = "_____"
+
+[connection signal="toggled" from="spender username" to="." method="on_spender_button_pressed"]

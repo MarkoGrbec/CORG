@@ -1,0 +1,72 @@
+[gd_scene load_steps=4 format=3 uid="uid://tgh8wetjjcqm"]
+
+[ext_resource type="Script" uid="uid://byw0meqedoq66" path="res://my assets/database/GUI/Windows/Database/DBMSReadWriter.gd" id="1_qjjli"]
+[ext_resource type="PackedScene" uid="uid://c3franmhxso8l" path="res://my assets/database/GUI/Windows/Database/table.tscn" id="2_trx13"]
+[ext_resource type="PackedScene" uid="uid://dutlwwlmanill" path="res://my assets/database/GUI/Windows/Database/gui_server_client_tab.tscn" id="3_c5mfj"]
+
+[node name="DataBase" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="DBMS" type="VBoxContainer" parent="." node_paths=PackedStringArray("root_text", "data_base_table_container")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_qjjli")
+table = ExtResource("2_trx13")
+gui_server_client_tab = ExtResource("3_c5mfj")
+root_text = NodePath("DBMSRootText/header container/root text/root text")
+data_base_table_container = NodePath("MarginContainer/ScrollContainer/DataBaseTableContainer")
+
+[node name="DBMSRootText" type="MarginContainer" parent="DBMS"]
+custom_minimum_size = Vector2(0, 64)
+layout_mode = 2
+
+[node name="header container" type="HBoxContainer" parent="DBMS/DBMSRootText"]
+layout_mode = 2
+
+[node name="root text" type="MarginContainer" parent="DBMS/DBMSRootText/header container"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="root text" type="LineEdit" parent="DBMS/DBMSRootText/header container/root text"]
+layout_mode = 2
+
+[node name="save" type="MarginContainer" parent="DBMS/DBMSRootText/header container"]
+custom_minimum_size = Vector2(128, 0)
+layout_mode = 2
+
+[node name="save" type="Button" parent="DBMS/DBMSRootText/header container/save"]
+layout_mode = 2
+text = "save"
+
+[node name="x" type="MarginContainer" parent="DBMS/DBMSRootText/header container"]
+custom_minimum_size = Vector2(64, 0)
+layout_mode = 2
+
+[node name="X button" type="Button" parent="DBMS/DBMSRootText/header container/x"]
+layout_mode = 2
+text = "X"
+
+[node name="MarginContainer" type="MarginContainer" parent="DBMS"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="ScrollContainer" type="ScrollContainer" parent="DBMS/MarginContainer"]
+layout_mode = 2
+
+[node name="DataBaseTableContainer" type="TabContainer" parent="DBMS/MarginContainer/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[connection signal="text_submitted" from="DBMS/DBMSRootText/header container/root text/root text" to="DBMS" method="_on_root_text_submit"]
+[connection signal="pressed" from="DBMS/DBMSRootText/header container/save/save" to="DBMS" method="save_data"]
+[connection signal="pressed" from="DBMS/DBMSRootText/header container/x/X button" to="DBMS" method="_on_exit"]

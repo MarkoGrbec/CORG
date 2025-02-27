@@ -1,0 +1,27 @@
+[gd_scene load_steps=2 format=3 uid="uid://fwg5l3pyhvg0"]
+
+[ext_resource type="Script" path="res://GUI/Windows/MainMenu/corg/Marketplace/Item/Item.gd" id="1_juh03"]
+
+[node name="item" type="VBoxContainer"]
+script = ExtResource("1_juh03")
+
+[node name="item name" type="Label" parent="."]
+visible = false
+layout_mode = 2
+text = "fgh"
+
+[node name="item cost" type="Label" parent="."]
+visible = false
+layout_mode = 2
+text = "gh"
+
+[node name="item click" type="Button" parent="."]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+text = "manage item:"
+
+[node name="remove item" type="Label" parent="."]
+visible = false
+layout_mode = 2
+text = "_ _ _ _ _"

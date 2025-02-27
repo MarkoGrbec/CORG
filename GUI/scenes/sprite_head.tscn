@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://c3hc0xk1a7hal"]
+
+[node name="SpriteHead" type="VBoxContainer"]
+
+[node name="sprite" type="HBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="CheckBox" type="CheckBox" parent="sprite"]
+custom_minimum_size = Vector2(25, 25)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="sprite"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+text = "sprite head4"
+horizontal_alignment = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+
+[node name="container" type="HBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 3
+
+[node name="SpriteContainer" type="VBoxContainer" parent="MarginContainer/container"]
+layout_mode = 2

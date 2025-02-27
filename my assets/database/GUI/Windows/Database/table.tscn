@@ -1,0 +1,27 @@
+[gd_scene load_steps=3 format=3 uid="uid://c3franmhxso8l"]
+
+[ext_resource type="Script" uid="uid://bxus74foy3vvs" path="res://my assets/database/GUI/Windows/Database/GUITable.gd" id="1_l7raa"]
+[ext_resource type="PackedScene" uid="uid://cv2udvb66hsni" path="res://my assets/database/GUI/Windows/Database/line_container.tscn" id="2_27xbf"]
+
+[node name="table" type="HBoxContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_l7raa")
+line_container = ExtResource("2_27xbf")
+
+[node name="left space" type="MarginContainer" parent="."]
+custom_minimum_size = Vector2(64, 0)
+layout_mode = 2
+
+[node name="margin container" type="MarginContainer" parent="."]
+custom_minimum_size = Vector2(150, 50)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_constants/margin_left = 0
+
+[node name="column container" type="HBoxContainer" parent="margin container"]
+layout_mode = 2

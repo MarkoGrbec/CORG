@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://d1cupu27y6qam"]
+
+[ext_resource type="Script" path="res://GUI/buttons/player_button/PlayerButton.gd" id="1_1hasl"]
+
+[node name="PlayerButton" type="Button"]
+script = ExtResource("1_1hasl")
+
+[connection signal="pressed" from="." to="." method="on_pressed"]

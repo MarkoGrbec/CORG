@@ -1,0 +1,31 @@
+[gd_scene load_steps=2 format=3 uid="uid://bwsew6fbd1jp"]
+
+[ext_resource type="Script" uid="uid://lhjrq8o8dhwl" path="res://tools/ScenesEnhancment/ItemList/ItemListColumns.gd" id="1_0n355"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+
+[node name="ItemList" type="ItemList" parent="."]
+layout_mode = 1
+offset_right = 272.0
+offset_bottom = 35.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+select_mode = 1
+auto_width = true
+auto_height = true
+item_count = 4
+max_columns = 4
+same_column_width = true
+item_0/text = "name"
+item_1/text = "damage"
+item_2/text = "quality"
+item_3/text = "weight"
+script = ExtResource("1_0n355")

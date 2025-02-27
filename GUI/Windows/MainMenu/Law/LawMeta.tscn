@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://b7u3j648rdlxr"]
+
+[ext_resource type="Script" path="res://GUI/Windows/MainMenu/Law/LawMeta.gd" id="1_jpmda"]
+
+[node name="LawMeta" type="Button"]
+size_flags_horizontal = 0
+size_flags_vertical = 0
+text = "law meta"
+script = ExtResource("1_jpmda")

@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://c18vyj1wgpv6t"]
+
+[ext_resource type="Script" path="res://GUI/Windows/CommercialManager/CommercialSpot.gd" id="1_qougp"]
+
+[node name="commercial spot" type="MarginContainer"]
+custom_minimum_size = Vector2(105, 105)
+size_flags_vertical = 3
+script = ExtResource("1_qougp")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 2
+expand_mode = 1
